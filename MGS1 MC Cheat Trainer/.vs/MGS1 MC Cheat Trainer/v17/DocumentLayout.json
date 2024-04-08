@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T14:17:39.281Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

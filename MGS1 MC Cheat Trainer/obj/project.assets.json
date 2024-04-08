@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mitch\\Desktop\\Visual Studio Projects\\MGS1 Cheat Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
+      "projectUniqueName": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
       "projectName": "MGS1 MC Cheat Trainer",
-      "projectPath": "C:\\Users\\Mitch\\Desktop\\Visual Studio Projects\\MGS1 Cheat Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
+      "projectPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
       "packagesPath": "C:\\Users\\Mitch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mitch\\Desktop\\Visual Studio Projects\\MGS1 Cheat Trainer\\MGS1 MC Cheat Trainer\\obj\\",
+      "outputPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

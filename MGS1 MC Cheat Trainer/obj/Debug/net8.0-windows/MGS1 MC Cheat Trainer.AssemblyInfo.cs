@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MGS1 MC Cheat Trainer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e72c8954f432a97275d5df702019591d049bb75e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MGS1 MC Cheat Trainer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MGS1 MC Cheat Trainer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
