@@ -20,7 +20,6 @@ C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.runtimeconfig.json
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.dll
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.pdb
-C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1_MC_Cheat_Trainer.Form1.resources
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1_MC_Cheat_Trainer.Properties.Resources.resources
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.csproj.GenerateResource.cache
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.GeneratedMSBuildEditorConfig.editorconfig
@@ -33,3 +32,4 @@ C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.pdb
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.genruntimeconfig.cache
 C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\ref\MGS1 MC Cheat Trainer.dll
+C:\Users\Mitch\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1_MC_Cheat_Trainer.MainForm.resources

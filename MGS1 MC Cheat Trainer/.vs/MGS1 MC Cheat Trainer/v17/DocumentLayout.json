@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\aobmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:aobmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\memorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:memorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|c:\\users\\mitch\\documents\\github\\mgs1-mc-cheat-trainer\\mgs1 mc cheat trainer\\loggingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF85EDD-2150-443F-AB37-3E56AB531EFA}|MGS1 MC Cheat Trainer.csproj|solutionrelative:loggingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +38,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AQIAAAUHAAAAAAAAAAAcwBcHAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T14:17:39.281Z",
+              "WhenOpened": "2024-04-22T21:28:33.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoggingManager.cs",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\LoggingManager.cs",
+              "RelativeDocumentMoniker": "LoggingManager.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\LoggingManager.cs",
+              "RelativeToolTip": "LoggingManager.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAIwF4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:44:42.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\Constants.cs",
+              "RelativeDocumentMoniker": "Constants.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\Constants.cs",
+              "RelativeToolTip": "Constants.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:42:19.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MemoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MemoryManager.cs",
+              "RelativeDocumentMoniker": "MemoryManager.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MemoryManager.cs",
+              "RelativeToolTip": "MemoryManager.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAcwGoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:41:25.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AobManager.cs",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\AobManager.cs",
+              "RelativeDocumentMoniker": "AobManager.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\AobManager.cs",
+              "RelativeToolTip": "AobManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:36:03.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAwwBAAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:32:47.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T21:28:56.18Z",
               "EditorCaption": " [Design]"
             }
           ]
