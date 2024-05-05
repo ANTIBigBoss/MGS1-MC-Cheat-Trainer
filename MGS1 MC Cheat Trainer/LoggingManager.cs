@@ -56,7 +56,6 @@ namespace MGS1_MC_Cheat_Trainer
             {
                 using (var stream = File.Create(logPath))
                 {
-                    // Immediately close the stream to release the file
                 }
             }
         }
@@ -81,13 +80,31 @@ namespace MGS1_MC_Cheat_Trainer
             var damageReadings = new Dictionary<string, Func<string>>()
             {
 
-                { "Most Weapons Damage", () => AobManager.Instance.ReadSocomAmmo() },
-                
+                { "Socom's Current Ammo", () => AobManager.Instance.ReadSocomAmmo() },
+                { "Socom's Max Ammo", () => AobManager.Instance.ReadSocomMaxAmmo() },
+                { "Famas's Current Ammo", () => AobManager.Instance.ReadFamasAmmo() },
+                { "Famas's Max Ammo", () => AobManager.Instance.ReadFamasMaxAmmo() },
+                { "Grenade's Current Ammo", () => AobManager.Instance.ReadGrenadeAmmo() },
+                { "Grenade's Max Ammo", () => AobManager.Instance.ReadGrenadeMaxAmmo() },
+                { "Nikita's Current Ammo", () => AobManager.Instance.ReadNikitaAmmo() },
+                { "Nikita's Max Ammo", () => AobManager.Instance.ReadNikitaMaxAmmo() },
+                { "Stinger's Current Ammo", () => AobManager.Instance.ReadStingerAmmo() },
+                { "Stinger's Max Ammo", () => AobManager.Instance.ReadStingerMaxAmmo() },
+                { "Claymore's Current Ammo", () => AobManager.Instance.ReadClaymoreAmmo() },
+                { "Claymore's Max Ammo", () => AobManager.Instance.ReadClaymoreMaxAmmo() },
+                { "C4's Current Ammo", () => AobManager.Instance.ReadC4Ammo() },
+                { "C4's Max Ammo", () => AobManager.Instance.ReadC4MaxAmmo() },
+                { "Stun Grenade's Current Ammo", () => AobManager.Instance.ReadStunGrenadeAmmo() },
+                { "Stun Grenade's Max Ammo", () => AobManager.Instance.ReadStunGrenadeMaxAmmo() },
+                { "Chaff Grenade's Current Ammo", () => AobManager.Instance.ReadChaffGrenadeAmmo() },
+                { "Chaff Grenade's Max Ammo", () => AobManager.Instance.ReadChaffGrenadeMaxAmmo() },
+                { "PSG1's Current Ammo", () => AobManager.Instance.ReadPSG1Ammo() },
+                { "PSG1's Max Ammo", () => AobManager.Instance.ReadPSG1MaxAmmo() },
             };
 
             foreach (var reading in damageReadings)
             {
-                string message = reading.Value.Invoke(); // Execute the associated lambda function to get the damage reading
+                string message = reading.Value.Invoke();
                 LoggingManager.Instance.Log($"\n\n{reading.Key}:\n{message}");
             }
         }

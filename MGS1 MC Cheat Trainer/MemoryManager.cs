@@ -1,11 +1,7 @@
 ﻿using System.Diagnostics;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
-using static MGS1_MC_Cheat_Trainer.Constants;
-using System.Threading.Tasks;
-using static MGS1_MC_Cheat_Trainer.MemoryManager;
-using MGS1_MC_Cheat_Trainer;
+using DataType = MGS1_MC_Cheat_Trainer.Constants.DataType;
 
 namespace MGS1_MC_Cheat_Trainer
 {
@@ -17,25 +13,15 @@ namespace MGS1_MC_Cheat_Trainer
 
         public static class NativeMethods
         {
-            // Declare OpenProcess
             [DllImport("kernel32.dll", SetLastError = true)]
             public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
 
-            // Declare WriteProcessMemory with short
-            [DllImport("kernel32.dll", SetLastError = true)]
-            public static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, ref short lpBuffer, uint nSize, out int lpNumberOfBytesWritten);
-            // and with bytes
             [DllImport("kernel32.dll", SetLastError = true)]
             public static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, uint nSize, out int lpNumberOfBytesWritten);
 
-            // Declare ReadProcessMemory
-            [DllImport("kernel32.dll", SetLastError = true)]
-            public static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, out short lpBuffer, uint size, out int lpNumberOfBytesRead);
-            // and with bytes
             [DllImport("kernel32.dll")]
             public static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, uint nSize, out int lpNumberOfBytesRead);
 
-            // Declare CloseHandle
             [DllImport("kernel32.dll", SetLastError = true)]
             public static extern bool CloseHandle(IntPtr hObject);
 
@@ -73,7 +59,6 @@ namespace MGS1_MC_Cheat_Trainer
             return NativeMethods.ReadProcessMemory(processHandle, address, buffer, size, out bytesRead);
         }
 
-
         public static byte[] ReadMemoryBytes(IntPtr processHandle, IntPtr address, int bytesToRead)
         {
             byte[] buffer = new byte[bytesToRead];
@@ -84,7 +69,7 @@ namespace MGS1_MC_Cheat_Trainer
             return null;
         }
 
-        public static string ReadMemoryValueAsString(IntPtr processHandle, IntPtr address, int bytesToRead)
+        public static string ReadMemoryValueAsString(IntPtr processHandle, IntPtr address, int bytesToRead, DataType dataType)
         {
             Process process = GetMGS1Process();
             if (process == null || process.MainModule == null)
@@ -94,85 +79,104 @@ namespace MGS1_MC_Cheat_Trainer
 
             byte[] buffer = ReadMemoryBytes(processHandle, address, bytesToRead);
             string addressHex = $"0x{address.ToInt64():X}";
+            string moduleOffset = $"METAL GEAR SOLID.exe+{(address.ToInt64() - process.MainModule.BaseAddress.ToInt64()):X}";
 
             if (buffer == null || buffer.Length != bytesToRead)
-                return $"Failed to read memory from: (Address: {addressHex}).";
+                return $"Failed to read memory from: {moduleOffset} (Address: {addressHex}).";
 
-            return FormatMemoryRead(buffer, bytesToRead, addressHex, "0x");
+            return FormatMemoryRead(buffer, bytesToRead, addressHex, moduleOffset, dataType);
         }
 
-        private static string FormatMemoryRead(byte[] buffer, int bytesToRead, string addressHex, string moduleOffset)
+        private static string FormatMemoryRead(byte[] buffer, int bytesToRead, string addressHex, string moduleOffset, DataType dataType)
         {
             StringBuilder result = new StringBuilder();
             result.Append($"Address: {addressHex}\n");
 
-            switch (bytesToRead)
+            switch (dataType)
             {
-                case 1:  // Byte
-                    result.Append($"Int8/Byte\nValue in Decimal: {buffer[0]}\nValue in Hex: {buffer[0]:X2}");
+                case DataType.UInt8:
+                    result.Append($"UInt8/Byte\nValue in Decimal: {buffer[0]}\nValue in Hex: {buffer[0]:X2}\n");
                     break;
-
-                case 2:  // Short
+                case DataType.Int8:
+                    sbyte sbyteVal = (sbyte)buffer[0];
+                    result.Append($"Int8/Signed Byte\nValue in Decimal: {sbyteVal}\nValue in Hex: {sbyteVal:X2}\n");
+                    break;
+                case DataType.Int16:
                     short shortVal = BitConverter.ToInt16(buffer, 0);
-                    result.Append($"Int16/Short\nValue in Decimal: {shortVal}\nValue in Hex: {shortVal:X4}");
+                    result.Append($"Int16\nValue in Decimal: {shortVal}\nValue in Hex: {shortVal:X4}\n");
                     break;
-
-                case 4:  // Int, UInt, and Float
+                case DataType.UInt16:
+                    ushort ushortVal = BitConverter.ToUInt16(buffer, 0);
+                    result.Append($"UInt16\nValue in Decimal: {ushortVal}\nValue in Hex: {ushortVal:X4}\n");
+                    break;
+                case DataType.Int32:
                     int intVal = BitConverter.ToInt32(buffer, 0);
+                    result.Append($"Int32\nValue in Decimal: {intVal}\nValue in Hex: {intVal:X8}\n");
+                    break;
+                case DataType.UInt32:
                     uint uintVal = BitConverter.ToUInt32(buffer, 0);
-                    float floatVal = BitConverter.ToSingle(buffer, 0);
-                    result.Append($"Int32/Integer\nValue in Decimal: {intVal}\nValue in Hex: {intVal:X8}\n");
-                    result.Append($"UInt32/Unsigned Integer\nValue in Decimal: {uintVal}\nValue in Hex: {uintVal:X8}\n");
-                    result.Append($"Float\nValue: {floatVal}");
+                    result.Append($"UInt32\nValue in Decimal: {uintVal}\nValue in Hex: {uintVal:X8}\n");
                     break;
-
-                case 6:
-                    result.Append("Byte Array (6 bytes)\nValue in Decimal: ");
-                    foreach (byte b in buffer)
-                        result.Append($"{b} ");
-                    result.AppendLine();
-                    result.Append("Value in Hex: ");
-                    result.Append(BitConverter.ToString(buffer).Replace("-", " "));
-                    break;
-
-                case 8:  // Long and Double
+                case DataType.Int64:
                     long longVal = BitConverter.ToInt64(buffer, 0);
+                    result.Append($"Int64\nValue in Decimal: {longVal}\nValue in Hex: {longVal:X16}\n");
+                    break;
+                case DataType.UInt64:
+                    ulong ulongVal = BitConverter.ToUInt64(buffer, 0);
+                    result.Append($"UInt64\nValue in Decimal: {ulongVal}\nValue in Hex: {ulongVal:X16}\n");
+                    break;
+                case DataType.Float:
+                    float floatVal = BitConverter.ToSingle(buffer, 0);
+                    result.Append($"Float\nValue in Decimal: {floatVal}\nValue in Hex: {BitConverter.ToInt32(buffer, 0):X8}\n");
+                    break;
+                case DataType.Double:
                     double doubleVal = BitConverter.ToDouble(buffer, 0);
-                    result.Append($"Int64/Long\nValue in Decimal: {longVal}\nValue in Hex: {longVal:X16}\n");
-                    result.Append($"Double\nValue: {doubleVal}");
+                    result.Append($"Double\nValue in Decimal: {doubleVal}\nValue in Hex: {BitConverter.ToInt64(buffer, 0):X16}\n");
                     break;
-
-                default:  // Arbitrary Byte Array
-                    result.Append("Byte Array\nValue in Hex: ");
-                    foreach (byte b in buffer)
-                        result.Append($"{b:X2} ");
+                case DataType.ByteArray:
+                    result.Append("Byte Array\nValues in Decimal: ");
+                    for (int i = 0; i < bytesToRead; i++)
+                    {
+                        result.Append($"{buffer[i]} ");
+                    }
+                    result.Append("\nValues in Hex: ");
+                    for (int i = 0; i < bytesToRead; i++)
+                    {
+                        result.Append($"{buffer[i]:X2} ");
+                    }
                     break;
+                default:
+                    throw new InvalidOperationException("Unsupported data type.");
             }
 
-            return result.ToString().Trim();  // Trim to remove any trailing spaces
+            return result.ToString().Trim();
         }
 
-        public static bool WriteMemory<T>(IntPtr processHandle, IntPtr address, T value) where T : struct
+        public static bool WriteMemory<T>(IntPtr processHandle, IntPtr address, T value)
         {
-            byte[] buffer = GetBytes(value);
+            byte[] buffer;
+
+            if (typeof(T) == typeof(byte[]))
+            {
+                buffer = value as byte[];
+            }
+            else
+            {
+                int size = Marshal.SizeOf(typeof(T));
+                buffer = new byte[size];
+                IntPtr ptr = Marshal.AllocHGlobal(size);
+                try
+                {
+                    Marshal.StructureToPtr(value, ptr, false);
+                    Marshal.Copy(ptr, buffer, 0, size);
+                }
+                finally
+                {
+                    Marshal.FreeHGlobal(ptr);
+                }
+            }
+
             return NativeMethods.WriteProcessMemory(processHandle, address, buffer, (uint)buffer.Length, out _);
-        }
-
-        private static byte[] GetBytes<T>(T value) where T : struct
-        {
-            int size = Marshal.SizeOf(typeof(T));
-            byte[] arr = new byte[size];
-            IntPtr ptr = Marshal.AllocHGlobal(size);
-            try
-            {
-                Marshal.StructureToPtr(value, ptr, true);
-                Marshal.Copy(ptr, arr, 0, size);
-            }
-            finally
-            {
-                Marshal.FreeHGlobal(ptr);
-            }
-            return arr;
         }
 
         public IntPtr ScanMemory(IntPtr processHandle, IntPtr startAddress, long size, byte[] pattern, string mask)
@@ -203,7 +207,6 @@ namespace MGS1_MC_Cheat_Trainer
 
             return IntPtr.Zero;
         }
-
 
         public IntPtr FindDynamicAob(string key)
         {
