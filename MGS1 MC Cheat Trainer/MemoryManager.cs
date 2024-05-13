@@ -7,9 +7,9 @@ namespace MGS1_MC_Cheat_Trainer
 {
     public class MemoryManager
     {
-        private static MemoryManager _instance;
+        private static MemoryManager ?_instance;
 
-        public static MemoryManager Instance => _instance ?? (_instance = new MemoryManager());
+        public static MemoryManager Instance => _instance ??= new MemoryManager();
 
         public static class NativeMethods
         {
@@ -23,8 +23,7 @@ namespace MGS1_MC_Cheat_Trainer
             public static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, uint nSize, out int lpNumberOfBytesRead);
 
             [DllImport("kernel32.dll", SetLastError = true)]
-            public static extern bool CloseHandle(IntPtr hObject);
-
+            internal static extern bool CloseHandle(IntPtr hObject);
         }
 
         public static IntPtr PROCESS_BASE_ADDRESS = IntPtr.Zero;
@@ -79,17 +78,16 @@ namespace MGS1_MC_Cheat_Trainer
 
             byte[] buffer = ReadMemoryBytes(processHandle, address, bytesToRead);
             string addressHex = $"0x{address.ToInt64():X}";
-            string moduleOffset = $"METAL GEAR SOLID.exe+{(address.ToInt64() - process.MainModule.BaseAddress.ToInt64()):X}";
 
             if (buffer == null || buffer.Length != bytesToRead)
-                return $"Failed to read memory from: {moduleOffset} (Address: {addressHex}).";
+                return $"Failed to read memory from: {addressHex}).";
 
-            return FormatMemoryRead(buffer, bytesToRead, addressHex, moduleOffset, dataType);
+            return FormatMemoryRead(buffer, bytesToRead, addressHex, dataType);
         }
 
-        private static string FormatMemoryRead(byte[] buffer, int bytesToRead, string addressHex, string moduleOffset, DataType dataType)
+        private static string FormatMemoryRead(byte[] buffer, int bytesToRead, string addressHex, DataType dataType)
         {
-            StringBuilder result = new StringBuilder();
+            StringBuilder result = new();
             result.Append($"Address: {addressHex}\n");
 
             switch (dataType)
@@ -154,7 +152,7 @@ namespace MGS1_MC_Cheat_Trainer
 
         public static bool WriteMemory<T>(IntPtr processHandle, IntPtr address, T value)
         {
-            byte[] buffer;
+            byte[]? buffer;
 
             if (typeof(T) == typeof(byte[]))
             {
@@ -251,7 +249,7 @@ namespace MGS1_MC_Cheat_Trainer
             return foundAddress;
         }
 
-        public bool IsMatch(byte[] buffer, int position, byte[] pattern, string mask)
+        public static bool IsMatch(byte[] buffer, int position, byte[] pattern, string mask)
         {
             for (int i = 0; i < pattern.Length; i++)
             {

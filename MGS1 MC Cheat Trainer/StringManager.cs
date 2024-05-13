@@ -6,7 +6,7 @@ namespace MGS1_MC_Cheat_Trainer
 {
     public class StringManager
     {
-        private static StringManager instance;
+        private static StringManager ?instance;
         private static readonly object lockObj = new object();
 
         private StringManager()

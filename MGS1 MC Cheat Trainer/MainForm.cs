@@ -19,15 +19,9 @@ namespace MGS1_MC_Cheat_Trainer
 
             if (aobFound)
             {
-                ReadAmmoValues();
                 LoggingManager.Instance.Log("Successfully hooked to the game process!");
                 
             }
-        }
-
-        private void ReadAmmoValues()
-        {
-            
         }
 
         private void SetAmmoSocom_Click(object sender, EventArgs e)
