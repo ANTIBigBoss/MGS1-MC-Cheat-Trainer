@@ -52,11 +52,11 @@
             pictureBox10 = new PictureBox();
             pictureBox16 = new PictureBox();
             pictureBox17 = new PictureBox();
-            button18 = new Button();
+            SetDiazapamCount = new Button();
             pictureBox18 = new PictureBox();
-            button19 = new Button();
+            SetMedicineCount = new Button();
             pictureBox19 = new PictureBox();
-            button20 = new Button();
+            SetRationcount = new Button();
             pictureBox20 = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox12 = new PictureBox();
@@ -109,10 +109,46 @@
             DiazapamMaxCountNumericBox = new NumericUpDown();
             DiazapamCountNumericBox = new NumericUpDown();
             label12 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            EnableStealthCamo = new Button();
+            DisableStealthCamo = new Button();
+            DisableBandana = new Button();
+            EnableBandana = new Button();
+            DisableBoxA = new Button();
+            EnableBoxA = new Button();
+            DisableBoxB = new Button();
+            EnableBoxB = new Button();
+            DisableBoxC = new Button();
+            EnableBoxC = new Button();
+            pictureBox29 = new PictureBox();
+            DisableBodyArmor = new Button();
+            EnableBodyArmor = new Button();
+            DisableMineD = new Button();
+            EnableMineD = new Button();
+            DisableGasmask = new Button();
+            EnableGasmask = new Button();
+            DisableNvg = new Button();
+            EnableNvg = new Button();
+            DisableThermal = new Button();
+            EnableThermal = new Button();
+            DisableScope = new Button();
+            EnableScope = new Button();
+            pictureBox30 = new PictureBox();
+            DisableCigs = new Button();
+            EnableCigs = new Button();
+            DisableHandkerchief = new Button();
+            EnableHandkerchief = new Button();
+            DisableKetchup = new Button();
+            EnableKetchup = new Button();
+            DisableRope = new Button();
+            EnableRope = new Button();
+            ChangePalKeyToNormalTemp = new Button();
+            ChangePalKeyToHotTemp = new Button();
+            Minus1ToKeycardLevel = new Button();
+            Add1ToKeycardLevel = new Button();
+            ChangePalKeyToColdTemp = new Button();
+            TimeBombNumerical = new NumericUpDown();
+            SetBombTimer = new Button();
+            pictureBox31 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -167,16 +203,19 @@
             ((System.ComponentModel.ISupportInitialize)MedicineCountNumericBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DiazapamMaxCountNumericBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DiazapamCountNumericBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TimeBombNumerical).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).BeginInit();
             SuspendLayout();
             // 
             // pictureBox4
             // 
             pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
             pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox4.Location = new Point(7, 33);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Location = new Point(6, 3);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(171, 120);
+            pictureBox4.Size = new Size(150, 90);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
@@ -189,10 +228,9 @@
             SetAmmoSocom.Cursor = Cursors.Hand;
             SetAmmoSocom.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoSocom.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoSocom.Location = new Point(8, 141);
-            SetAmmoSocom.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoSocom.Location = new Point(7, 87);
             SetAmmoSocom.Name = "SetAmmoSocom";
-            SetAmmoSocom.Size = new Size(171, 30);
+            SetAmmoSocom.Size = new Size(150, 28);
             SetAmmoSocom.TabIndex = 10;
             SetAmmoSocom.Text = "Set Socom Ammo";
             SetAmmoSocom.UseVisualStyleBackColor = false;
@@ -206,10 +244,9 @@
             SetAmmoFamas.Cursor = Cursors.Hand;
             SetAmmoFamas.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoFamas.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoFamas.Location = new Point(9, 302);
-            SetAmmoFamas.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoFamas.Location = new Point(8, 205);
             SetAmmoFamas.Name = "SetAmmoFamas";
-            SetAmmoFamas.Size = new Size(166, 28);
+            SetAmmoFamas.Size = new Size(145, 28);
             SetAmmoFamas.TabIndex = 16;
             SetAmmoFamas.Text = "Set Famas Ammo";
             SetAmmoFamas.UseVisualStyleBackColor = false;
@@ -219,10 +256,9 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(8, 185);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(7, 120);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(167, 120);
+            pictureBox1.Size = new Size(146, 90);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
@@ -235,10 +271,9 @@
             SetAmmoNikita.Cursor = Cursors.Hand;
             SetAmmoNikita.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoNikita.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoNikita.Location = new Point(6, 604);
-            SetAmmoNikita.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoNikita.Location = new Point(5, 442);
             SetAmmoNikita.Name = "SetAmmoNikita";
-            SetAmmoNikita.Size = new Size(169, 28);
+            SetAmmoNikita.Size = new Size(150, 28);
             SetAmmoNikita.TabIndex = 28;
             SetAmmoNikita.Text = "Set Nikita Ammo";
             SetAmmoNikita.UseVisualStyleBackColor = false;
@@ -248,10 +283,9 @@
             // 
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(6, 487);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(5, 358);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(168, 120);
+            pictureBox2.Size = new Size(147, 90);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
@@ -264,10 +298,9 @@
             SetAmmoGrenade.Cursor = Cursors.Hand;
             SetAmmoGrenade.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoGrenade.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoGrenade.Location = new Point(189, 758);
-            SetAmmoGrenade.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoGrenade.Location = new Point(165, 559);
             SetAmmoGrenade.Name = "SetAmmoGrenade";
-            SetAmmoGrenade.Size = new Size(171, 28);
+            SetAmmoGrenade.Size = new Size(150, 28);
             SetAmmoGrenade.TabIndex = 22;
             SetAmmoGrenade.Text = "Set Grenade";
             SetAmmoGrenade.UseVisualStyleBackColor = false;
@@ -277,10 +310,9 @@
             // 
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(189, 640);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Location = new Point(165, 475);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(171, 120);
+            pictureBox3.Size = new Size(150, 90);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 18;
             pictureBox3.TabStop = false;
@@ -293,12 +325,11 @@
             SetAmmoStinger.Cursor = Cursors.Hand;
             SetAmmoStinger.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoStinger.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoStinger.Location = new Point(4, 756);
-            SetAmmoStinger.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoStinger.Location = new Point(4, 559);
             SetAmmoStinger.Name = "SetAmmoStinger";
-            SetAmmoStinger.Size = new Size(171, 28);
+            SetAmmoStinger.Size = new Size(150, 28);
             SetAmmoStinger.TabIndex = 34;
-            SetAmmoStinger.Text = "Set Stringer Ammo";
+            SetAmmoStinger.Text = "Set Stinger Ammo";
             SetAmmoStinger.UseVisualStyleBackColor = false;
             SetAmmoStinger.Click += SetAmmoStinger_Click;
             // 
@@ -306,10 +337,9 @@
             // 
             pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
             pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox5.Location = new Point(6, 640);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
+            pictureBox5.Location = new Point(5, 475);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(168, 120);
+            pictureBox5.Size = new Size(147, 90);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 30;
             pictureBox5.TabStop = false;
@@ -322,10 +352,9 @@
             SetAmmoPSG1.Cursor = Cursors.Hand;
             SetAmmoPSG1.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoPSG1.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoPSG1.Location = new Point(9, 451);
-            SetAmmoPSG1.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoPSG1.Location = new Point(5, 323);
             SetAmmoPSG1.Name = "SetAmmoPSG1";
-            SetAmmoPSG1.Size = new Size(167, 28);
+            SetAmmoPSG1.Size = new Size(150, 28);
             SetAmmoPSG1.TabIndex = 64;
             SetAmmoPSG1.Text = "Set PSG-1 Ammo";
             SetAmmoPSG1.UseVisualStyleBackColor = false;
@@ -335,10 +364,9 @@
             // 
             pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
             pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox6.Location = new Point(8, 338);
-            pictureBox6.Margin = new Padding(3, 4, 3, 4);
+            pictureBox6.Location = new Point(7, 240);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(166, 120);
+            pictureBox6.Size = new Size(145, 90);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 60;
             pictureBox6.TabStop = false;
@@ -351,10 +379,9 @@
             SetAmmoChaffGrenade.Cursor = Cursors.Hand;
             SetAmmoChaffGrenade.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoChaffGrenade.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoChaffGrenade.Location = new Point(189, 604);
-            SetAmmoChaffGrenade.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoChaffGrenade.Location = new Point(165, 442);
             SetAmmoChaffGrenade.Name = "SetAmmoChaffGrenade";
-            SetAmmoChaffGrenade.Size = new Size(171, 28);
+            SetAmmoChaffGrenade.Size = new Size(150, 28);
             SetAmmoChaffGrenade.TabIndex = 58;
             SetAmmoChaffGrenade.Text = "Set Chaff Grenade";
             SetAmmoChaffGrenade.UseVisualStyleBackColor = false;
@@ -364,10 +391,9 @@
             // 
             pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
             pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(189, 487);
-            pictureBox7.Margin = new Padding(3, 4, 3, 4);
+            pictureBox7.Location = new Point(165, 358);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(171, 120);
+            pictureBox7.Size = new Size(150, 90);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 54;
             pictureBox7.TabStop = false;
@@ -380,10 +406,9 @@
             SetAmmoStunGrenade.Cursor = Cursors.Hand;
             SetAmmoStunGrenade.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoStunGrenade.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoStunGrenade.Location = new Point(190, 453);
-            SetAmmoStunGrenade.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoStunGrenade.Location = new Point(166, 323);
             SetAmmoStunGrenade.Name = "SetAmmoStunGrenade";
-            SetAmmoStunGrenade.Size = new Size(171, 28);
+            SetAmmoStunGrenade.Size = new Size(150, 28);
             SetAmmoStunGrenade.TabIndex = 52;
             SetAmmoStunGrenade.Text = "Set Stun Grenade";
             SetAmmoStunGrenade.UseVisualStyleBackColor = false;
@@ -393,10 +418,9 @@
             // 
             pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
             pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox8.Location = new Point(190, 338);
-            pictureBox8.Margin = new Padding(3, 4, 3, 4);
+            pictureBox8.Location = new Point(166, 240);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(171, 120);
+            pictureBox8.Size = new Size(150, 90);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 48;
             pictureBox8.TabStop = false;
@@ -409,10 +433,9 @@
             SetAmmoC4.Cursor = Cursors.Hand;
             SetAmmoC4.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoC4.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoC4.Location = new Point(192, 302);
-            SetAmmoC4.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoC4.Location = new Point(168, 205);
             SetAmmoC4.Name = "SetAmmoC4";
-            SetAmmoC4.Size = new Size(171, 28);
+            SetAmmoC4.Size = new Size(150, 28);
             SetAmmoC4.TabIndex = 46;
             SetAmmoC4.Text = "Set C4";
             SetAmmoC4.UseVisualStyleBackColor = false;
@@ -422,10 +445,9 @@
             // 
             pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
             pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox9.Location = new Point(192, 185);
-            pictureBox9.Margin = new Padding(3, 4, 3, 4);
+            pictureBox9.Location = new Point(168, 120);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(171, 120);
+            pictureBox9.Size = new Size(150, 90);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 42;
             pictureBox9.TabStop = false;
@@ -438,10 +460,9 @@
             SetAmmoClaymore.Cursor = Cursors.Hand;
             SetAmmoClaymore.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SetAmmoClaymore.ForeColor = SystemColors.ActiveCaptionText;
-            SetAmmoClaymore.Location = new Point(191, 148);
-            SetAmmoClaymore.Margin = new Padding(3, 4, 3, 4);
+            SetAmmoClaymore.Location = new Point(166, 87);
             SetAmmoClaymore.Name = "SetAmmoClaymore";
-            SetAmmoClaymore.Size = new Size(171, 28);
+            SetAmmoClaymore.Size = new Size(150, 28);
             SetAmmoClaymore.TabIndex = 40;
             SetAmmoClaymore.Text = "Set Claymore";
             SetAmmoClaymore.UseVisualStyleBackColor = false;
@@ -453,9 +474,9 @@
             label19.BackColor = SystemColors.ActiveCaptionText;
             label19.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label19.ForeColor = SystemColors.ButtonFace;
-            label19.Location = new Point(81, 118);
+            label19.Location = new Point(71, 66);
             label19.Name = "label19";
-            label19.Size = new Size(18, 20);
+            label19.Size = new Size(16, 17);
             label19.TabIndex = 38;
             label19.Text = "/";
             // 
@@ -463,10 +484,9 @@
             // 
             pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
             pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox10.Location = new Point(191, 33);
-            pictureBox10.Margin = new Padding(3, 4, 3, 4);
+            pictureBox10.Location = new Point(167, 3);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(169, 120);
+            pictureBox10.Size = new Size(148, 90);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 36;
             pictureBox10.TabStop = false;
@@ -475,10 +495,9 @@
             // 
             pictureBox16.BackgroundImage = (Image)resources.GetObject("pictureBox16.BackgroundImage");
             pictureBox16.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox16.Location = new Point(377, 487);
-            pictureBox16.Margin = new Padding(3, 4, 3, 4);
+            pictureBox16.Location = new Point(167, 594);
             pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(169, 120);
+            pictureBox16.Size = new Size(148, 90);
             pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox16.TabIndex = 90;
             pictureBox16.TabStop = false;
@@ -487,94 +506,90 @@
             // 
             pictureBox17.BackgroundImage = (Image)resources.GetObject("pictureBox17.BackgroundImage");
             pictureBox17.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox17.Location = new Point(375, 640);
-            pictureBox17.Margin = new Padding(3, 4, 3, 4);
+            pictureBox17.Location = new Point(4, 594);
             pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(169, 120);
+            pictureBox17.Size = new Size(148, 90);
             pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox17.TabIndex = 84;
             pictureBox17.TabStop = false;
             // 
-            // button18
+            // SetDiazapamCount
             // 
-            button18.BackColor = Color.Transparent;
-            button18.BackgroundImage = (Image)resources.GetObject("button18.BackgroundImage");
-            button18.BackgroundImageLayout = ImageLayout.Stretch;
-            button18.Cursor = Cursors.Hand;
-            button18.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
-            button18.ForeColor = SystemColors.ActiveCaptionText;
-            button18.Location = new Point(377, 453);
-            button18.Margin = new Padding(3, 4, 3, 4);
-            button18.Name = "button18";
-            button18.Size = new Size(171, 28);
-            button18.TabIndex = 82;
-            button18.Text = "Set Diazapam";
-            button18.UseVisualStyleBackColor = false;
+            SetDiazapamCount.BackColor = Color.Transparent;
+            SetDiazapamCount.BackgroundImage = (Image)resources.GetObject("SetDiazapamCount.BackgroundImage");
+            SetDiazapamCount.BackgroundImageLayout = ImageLayout.Stretch;
+            SetDiazapamCount.Cursor = Cursors.Hand;
+            SetDiazapamCount.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            SetDiazapamCount.ForeColor = SystemColors.ActiveCaptionText;
+            SetDiazapamCount.Location = new Point(330, 323);
+            SetDiazapamCount.Name = "SetDiazapamCount";
+            SetDiazapamCount.Size = new Size(150, 28);
+            SetDiazapamCount.TabIndex = 82;
+            SetDiazapamCount.Text = "Set Diazapam";
+            SetDiazapamCount.UseVisualStyleBackColor = false;
+            SetDiazapamCount.Click += SetDiazapamCount_Click;
             // 
             // pictureBox18
             // 
             pictureBox18.BackgroundImage = (Image)resources.GetObject("pictureBox18.BackgroundImage");
             pictureBox18.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox18.Location = new Point(378, 338);
-            pictureBox18.Margin = new Padding(3, 4, 3, 4);
+            pictureBox18.Location = new Point(331, 240);
             pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(169, 120);
+            pictureBox18.Size = new Size(148, 90);
             pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox18.TabIndex = 78;
             pictureBox18.TabStop = false;
             // 
-            // button19
+            // SetMedicineCount
             // 
-            button19.BackColor = Color.Transparent;
-            button19.BackgroundImage = (Image)resources.GetObject("button19.BackgroundImage");
-            button19.BackgroundImageLayout = ImageLayout.Stretch;
-            button19.Cursor = Cursors.Hand;
-            button19.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
-            button19.ForeColor = SystemColors.ActiveCaptionText;
-            button19.Location = new Point(376, 302);
-            button19.Margin = new Padding(3, 4, 3, 4);
-            button19.Name = "button19";
-            button19.Size = new Size(169, 28);
-            button19.TabIndex = 76;
-            button19.Text = "Set Medicine";
-            button19.UseVisualStyleBackColor = false;
+            SetMedicineCount.BackColor = Color.Transparent;
+            SetMedicineCount.BackgroundImage = (Image)resources.GetObject("SetMedicineCount.BackgroundImage");
+            SetMedicineCount.BackgroundImageLayout = ImageLayout.Stretch;
+            SetMedicineCount.Cursor = Cursors.Hand;
+            SetMedicineCount.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            SetMedicineCount.ForeColor = SystemColors.ActiveCaptionText;
+            SetMedicineCount.Location = new Point(329, 205);
+            SetMedicineCount.Name = "SetMedicineCount";
+            SetMedicineCount.Size = new Size(150, 28);
+            SetMedicineCount.TabIndex = 76;
+            SetMedicineCount.Text = "Set Medicine";
+            SetMedicineCount.UseVisualStyleBackColor = false;
+            SetMedicineCount.Click += SetMedicineCount_Click;
             // 
             // pictureBox19
             // 
             pictureBox19.BackgroundImage = (Image)resources.GetObject("pictureBox19.BackgroundImage");
             pictureBox19.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox19.Location = new Point(376, 185);
-            pictureBox19.Margin = new Padding(3, 4, 3, 4);
+            pictureBox19.Location = new Point(329, 120);
             pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(169, 120);
+            pictureBox19.Size = new Size(148, 90);
             pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox19.TabIndex = 72;
             pictureBox19.TabStop = false;
             // 
-            // button20
+            // SetRationcount
             // 
-            button20.BackColor = Color.Transparent;
-            button20.BackgroundImage = (Image)resources.GetObject("button20.BackgroundImage");
-            button20.BackgroundImageLayout = ImageLayout.Stretch;
-            button20.Cursor = Cursors.Hand;
-            button20.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
-            button20.ForeColor = SystemColors.ActiveCaptionText;
-            button20.Location = new Point(375, 148);
-            button20.Margin = new Padding(3, 4, 3, 4);
-            button20.Name = "button20";
-            button20.Size = new Size(171, 28);
-            button20.TabIndex = 70;
-            button20.Text = "Set Ration";
-            button20.UseVisualStyleBackColor = false;
+            SetRationcount.BackColor = Color.Transparent;
+            SetRationcount.BackgroundImage = (Image)resources.GetObject("SetRationcount.BackgroundImage");
+            SetRationcount.BackgroundImageLayout = ImageLayout.Stretch;
+            SetRationcount.Cursor = Cursors.Hand;
+            SetRationcount.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            SetRationcount.ForeColor = SystemColors.ActiveCaptionText;
+            SetRationcount.Location = new Point(328, 87);
+            SetRationcount.Name = "SetRationcount";
+            SetRationcount.Size = new Size(150, 28);
+            SetRationcount.TabIndex = 70;
+            SetRationcount.Text = "Set Ration";
+            SetRationcount.UseVisualStyleBackColor = false;
+            SetRationcount.Click += SetRationcount_Click;
             // 
             // pictureBox20
             // 
             pictureBox20.BackgroundImage = (Image)resources.GetObject("pictureBox20.BackgroundImage");
             pictureBox20.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox20.Location = new Point(376, 33);
-            pictureBox20.Margin = new Padding(3, 4, 3, 4);
+            pictureBox20.Location = new Point(329, 3);
             pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(169, 120);
+            pictureBox20.Size = new Size(148, 90);
             pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox20.TabIndex = 66;
             pictureBox20.TabStop = false;
@@ -583,10 +598,9 @@
             // 
             pictureBox11.BackgroundImage = (Image)resources.GetObject("pictureBox11.BackgroundImage");
             pictureBox11.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox11.Location = new Point(979, 664);
-            pictureBox11.Margin = new Padding(3, 4, 3, 4);
+            pictureBox11.Location = new Point(651, 120);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(169, 120);
+            pictureBox11.Size = new Size(148, 90);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 98;
             pictureBox11.TabStop = false;
@@ -595,10 +609,9 @@
             // 
             pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
             pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox12.Location = new Point(1067, 316);
-            pictureBox12.Margin = new Padding(3, 4, 3, 4);
+            pictureBox12.Location = new Point(489, 3);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(171, 120);
+            pictureBox12.Size = new Size(148, 90);
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 95;
             pictureBox12.TabStop = false;
@@ -607,10 +620,9 @@
             // 
             pictureBox13.BackgroundImage = (Image)resources.GetObject("pictureBox13.BackgroundImage");
             pictureBox13.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox13.Location = new Point(1158, 664);
-            pictureBox13.Margin = new Padding(3, 4, 3, 4);
+            pictureBox13.Location = new Point(489, 240);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(169, 120);
+            pictureBox13.Size = new Size(148, 90);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox13.TabIndex = 104;
             pictureBox13.TabStop = false;
@@ -619,10 +631,9 @@
             // 
             pictureBox14.BackgroundImage = (Image)resources.GetObject("pictureBox14.BackgroundImage");
             pictureBox14.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox14.Location = new Point(979, 792);
-            pictureBox14.Margin = new Padding(3, 4, 3, 4);
+            pictureBox14.Location = new Point(651, 3);
             pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(169, 120);
+            pictureBox14.Size = new Size(148, 90);
             pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox14.TabIndex = 101;
             pictureBox14.TabStop = false;
@@ -631,10 +642,9 @@
             // 
             pictureBox15.BackgroundImage = (Image)resources.GetObject("pictureBox15.BackgroundImage");
             pictureBox15.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox15.Location = new Point(1158, 807);
-            pictureBox15.Margin = new Padding(3, 4, 3, 4);
+            pictureBox15.Location = new Point(651, 358);
             pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(169, 120);
+            pictureBox15.Size = new Size(148, 90);
             pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox15.TabIndex = 107;
             pictureBox15.TabStop = false;
@@ -643,10 +653,9 @@
             // 
             pictureBox21.BackgroundImage = (Image)resources.GetObject("pictureBox21.BackgroundImage");
             pictureBox21.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox21.Location = new Point(1158, 393);
-            pictureBox21.Margin = new Padding(3, 4, 3, 4);
+            pictureBox21.Location = new Point(487, 594);
             pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(169, 120);
+            pictureBox21.Size = new Size(148, 90);
             pictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox21.TabIndex = 122;
             pictureBox21.TabStop = false;
@@ -655,10 +664,9 @@
             // 
             pictureBox22.BackgroundImage = (Image)resources.GetObject("pictureBox22.BackgroundImage");
             pictureBox22.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox22.Location = new Point(979, 393);
-            pictureBox22.Margin = new Padding(3, 4, 3, 4);
+            pictureBox22.Location = new Point(651, 476);
             pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(169, 120);
+            pictureBox22.Size = new Size(148, 90);
             pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox22.TabIndex = 119;
             pictureBox22.TabStop = false;
@@ -667,10 +675,9 @@
             // 
             pictureBox23.BackgroundImage = (Image)resources.GetObject("pictureBox23.BackgroundImage");
             pictureBox23.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox23.Location = new Point(979, 264);
-            pictureBox23.Margin = new Padding(3, 4, 3, 4);
+            pictureBox23.Location = new Point(651, 238);
             pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(169, 120);
+            pictureBox23.Size = new Size(148, 90);
             pictureBox23.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox23.TabIndex = 116;
             pictureBox23.TabStop = false;
@@ -679,10 +686,9 @@
             // 
             pictureBox24.BackgroundImage = (Image)resources.GetObject("pictureBox24.BackgroundImage");
             pictureBox24.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox24.Location = new Point(979, 141);
-            pictureBox24.Margin = new Padding(3, 4, 3, 4);
+            pictureBox24.Location = new Point(489, 357);
             pictureBox24.Name = "pictureBox24";
-            pictureBox24.Size = new Size(169, 120);
+            pictureBox24.Size = new Size(148, 90);
             pictureBox24.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox24.TabIndex = 113;
             pictureBox24.TabStop = false;
@@ -691,10 +697,9 @@
             // 
             pictureBox25.BackgroundImage = (Image)resources.GetObject("pictureBox25.BackgroundImage");
             pictureBox25.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox25.Location = new Point(979, 13);
-            pictureBox25.Margin = new Padding(3, 4, 3, 4);
+            pictureBox25.Location = new Point(489, 120);
             pictureBox25.Name = "pictureBox25";
-            pictureBox25.Size = new Size(169, 120);
+            pictureBox25.Size = new Size(148, 90);
             pictureBox25.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox25.TabIndex = 110;
             pictureBox25.TabStop = false;
@@ -703,10 +708,9 @@
             // 
             pictureBox26.BackgroundImage = (Image)resources.GetObject("pictureBox26.BackgroundImage");
             pictureBox26.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox26.Location = new Point(556, 33);
-            pictureBox26.Margin = new Padding(3, 4, 3, 4);
+            pictureBox26.Location = new Point(332, 358);
             pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(169, 120);
+            pictureBox26.Size = new Size(148, 90);
             pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox26.TabIndex = 125;
             pictureBox26.TabStop = false;
@@ -715,10 +719,9 @@
             // 
             pictureBox27.BackgroundImage = (Image)resources.GetObject("pictureBox27.BackgroundImage");
             pictureBox27.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox27.Location = new Point(558, 217);
-            pictureBox27.Margin = new Padding(3, 4, 3, 4);
+            pictureBox27.Location = new Point(332, 474);
             pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(169, 120);
+            pictureBox27.Size = new Size(148, 90);
             pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox27.TabIndex = 128;
             pictureBox27.TabStop = false;
@@ -727,10 +730,9 @@
             // 
             pictureBox28.BackgroundImage = (Image)resources.GetObject("pictureBox28.BackgroundImage");
             pictureBox28.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox28.Location = new Point(558, 407);
-            pictureBox28.Margin = new Padding(3, 4, 3, 4);
+            pictureBox28.Location = new Point(332, 594);
             pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(169, 120);
+            pictureBox28.Size = new Size(148, 90);
             pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox28.TabIndex = 131;
             pictureBox28.TabStop = false;
@@ -740,11 +742,10 @@
             SocomAmmoNumericBox.BackColor = SystemColors.MenuText;
             SocomAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SocomAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            SocomAmmoNumericBox.Location = new Point(9, 116);
-            SocomAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            SocomAmmoNumericBox.Location = new Point(8, 65);
             SocomAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             SocomAmmoNumericBox.Name = "SocomAmmoNumericBox";
-            SocomAmmoNumericBox.Size = new Size(73, 27);
+            SocomAmmoNumericBox.Size = new Size(64, 23);
             SocomAmmoNumericBox.TabIndex = 134;
             SocomAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -753,11 +754,10 @@
             SocomMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             SocomMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             SocomMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            SocomMaxAmmoNumericBox.Location = new Point(98, 116);
-            SocomMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            SocomMaxAmmoNumericBox.Location = new Point(86, 65);
             SocomMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             SocomMaxAmmoNumericBox.Name = "SocomMaxAmmoNumericBox";
-            SocomMaxAmmoNumericBox.Size = new Size(79, 27);
+            SocomMaxAmmoNumericBox.Size = new Size(69, 23);
             SocomMaxAmmoNumericBox.TabIndex = 135;
             SocomMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -766,11 +766,10 @@
             FamasMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             FamasMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             FamasMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            FamasMaxAmmoNumericBox.Location = new Point(95, 268);
-            FamasMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            FamasMaxAmmoNumericBox.Location = new Point(83, 182);
             FamasMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             FamasMaxAmmoNumericBox.Name = "FamasMaxAmmoNumericBox";
-            FamasMaxAmmoNumericBox.Size = new Size(79, 27);
+            FamasMaxAmmoNumericBox.Size = new Size(69, 23);
             FamasMaxAmmoNumericBox.TabIndex = 138;
             FamasMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -779,11 +778,10 @@
             FamasAmmoNumericBox.BackColor = SystemColors.MenuText;
             FamasAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             FamasAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            FamasAmmoNumericBox.Location = new Point(11, 268);
-            FamasAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            FamasAmmoNumericBox.Location = new Point(10, 182);
             FamasAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             FamasAmmoNumericBox.Name = "FamasAmmoNumericBox";
-            FamasAmmoNumericBox.Size = new Size(68, 27);
+            FamasAmmoNumericBox.Size = new Size(60, 23);
             FamasAmmoNumericBox.TabIndex = 137;
             FamasAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -793,9 +791,9 @@
             label1.BackColor = SystemColors.ActiveCaptionText;
             label1.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(80, 270);
+            label1.Location = new Point(70, 183);
             label1.Name = "label1";
-            label1.Size = new Size(18, 20);
+            label1.Size = new Size(16, 17);
             label1.TabIndex = 136;
             label1.Text = "/";
             // 
@@ -804,11 +802,10 @@
             GrenadeMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             GrenadeMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             GrenadeMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            GrenadeMaxAmmoNumericBox.Location = new Point(281, 724);
-            GrenadeMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            GrenadeMaxAmmoNumericBox.Location = new Point(246, 538);
             GrenadeMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             GrenadeMaxAmmoNumericBox.Name = "GrenadeMaxAmmoNumericBox";
-            GrenadeMaxAmmoNumericBox.Size = new Size(79, 27);
+            GrenadeMaxAmmoNumericBox.Size = new Size(69, 23);
             GrenadeMaxAmmoNumericBox.TabIndex = 141;
             GrenadeMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -817,11 +814,10 @@
             GrenadeAmmoNumericBox.BackColor = SystemColors.MenuText;
             GrenadeAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             GrenadeAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            GrenadeAmmoNumericBox.Location = new Point(192, 724);
-            GrenadeAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            GrenadeAmmoNumericBox.Location = new Point(168, 538);
             GrenadeAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             GrenadeAmmoNumericBox.Name = "GrenadeAmmoNumericBox";
-            GrenadeAmmoNumericBox.Size = new Size(73, 27);
+            GrenadeAmmoNumericBox.Size = new Size(64, 23);
             GrenadeAmmoNumericBox.TabIndex = 140;
             GrenadeAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -831,9 +827,9 @@
             label2.BackColor = SystemColors.ActiveCaptionText;
             label2.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(264, 726);
+            label2.Location = new Point(231, 539);
             label2.Name = "label2";
-            label2.Size = new Size(18, 20);
+            label2.Size = new Size(16, 17);
             label2.TabIndex = 139;
             label2.Text = "/";
             // 
@@ -842,11 +838,10 @@
             NikitaMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             NikitaMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             NikitaMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            NikitaMaxAmmoNumericBox.Location = new Point(96, 571);
-            NikitaMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            NikitaMaxAmmoNumericBox.Location = new Point(84, 421);
             NikitaMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             NikitaMaxAmmoNumericBox.Name = "NikitaMaxAmmoNumericBox";
-            NikitaMaxAmmoNumericBox.Size = new Size(79, 27);
+            NikitaMaxAmmoNumericBox.Size = new Size(69, 23);
             NikitaMaxAmmoNumericBox.TabIndex = 144;
             NikitaMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -855,11 +850,10 @@
             NikitaAmmoNumericBox.BackColor = SystemColors.MenuText;
             NikitaAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             NikitaAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            NikitaAmmoNumericBox.Location = new Point(8, 571);
-            NikitaAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            NikitaAmmoNumericBox.Location = new Point(7, 421);
             NikitaAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             NikitaAmmoNumericBox.Name = "NikitaAmmoNumericBox";
-            NikitaAmmoNumericBox.Size = new Size(73, 27);
+            NikitaAmmoNumericBox.Size = new Size(64, 23);
             NikitaAmmoNumericBox.TabIndex = 143;
             NikitaAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -869,9 +863,9 @@
             label3.BackColor = SystemColors.ActiveCaptionText;
             label3.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(79, 574);
+            label3.Location = new Point(69, 423);
             label3.Name = "label3";
-            label3.Size = new Size(18, 20);
+            label3.Size = new Size(16, 17);
             label3.TabIndex = 142;
             label3.Text = "/";
             // 
@@ -880,11 +874,10 @@
             StingerMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             StingerMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             StingerMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            StingerMaxAmmoNumericBox.Location = new Point(95, 724);
-            StingerMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            StingerMaxAmmoNumericBox.Location = new Point(83, 538);
             StingerMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             StingerMaxAmmoNumericBox.Name = "StingerMaxAmmoNumericBox";
-            StingerMaxAmmoNumericBox.Size = new Size(79, 27);
+            StingerMaxAmmoNumericBox.Size = new Size(69, 23);
             StingerMaxAmmoNumericBox.TabIndex = 147;
             StingerMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -893,11 +886,10 @@
             StingerAmmoNumericBox.BackColor = SystemColors.MenuText;
             StingerAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             StingerAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            StingerAmmoNumericBox.Location = new Point(6, 724);
-            StingerAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            StingerAmmoNumericBox.Location = new Point(5, 538);
             StingerAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             StingerAmmoNumericBox.Name = "StingerAmmoNumericBox";
-            StingerAmmoNumericBox.Size = new Size(73, 27);
+            StingerAmmoNumericBox.Size = new Size(64, 23);
             StingerAmmoNumericBox.TabIndex = 146;
             StingerAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -907,9 +899,9 @@
             label4.BackColor = SystemColors.ActiveCaptionText;
             label4.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(78, 726);
+            label4.Location = new Point(68, 539);
             label4.Name = "label4";
-            label4.Size = new Size(18, 20);
+            label4.Size = new Size(16, 17);
             label4.TabIndex = 145;
             label4.Text = "/";
             // 
@@ -918,11 +910,10 @@
             ClaymoreMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             ClaymoreMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             ClaymoreMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            ClaymoreMaxAmmoNumericBox.Location = new Point(280, 116);
-            ClaymoreMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            ClaymoreMaxAmmoNumericBox.Location = new Point(245, 65);
             ClaymoreMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             ClaymoreMaxAmmoNumericBox.Name = "ClaymoreMaxAmmoNumericBox";
-            ClaymoreMaxAmmoNumericBox.Size = new Size(79, 27);
+            ClaymoreMaxAmmoNumericBox.Size = new Size(69, 23);
             ClaymoreMaxAmmoNumericBox.TabIndex = 150;
             ClaymoreMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -931,11 +922,10 @@
             ClaymoreAmmoNumericBox.BackColor = SystemColors.MenuText;
             ClaymoreAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             ClaymoreAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            ClaymoreAmmoNumericBox.Location = new Point(191, 116);
-            ClaymoreAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            ClaymoreAmmoNumericBox.Location = new Point(167, 65);
             ClaymoreAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             ClaymoreAmmoNumericBox.Name = "ClaymoreAmmoNumericBox";
-            ClaymoreAmmoNumericBox.Size = new Size(73, 27);
+            ClaymoreAmmoNumericBox.Size = new Size(64, 23);
             ClaymoreAmmoNumericBox.TabIndex = 149;
             ClaymoreAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -945,9 +935,9 @@
             label5.BackColor = SystemColors.ActiveCaptionText;
             label5.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(263, 118);
+            label5.Location = new Point(230, 66);
             label5.Name = "label5";
-            label5.Size = new Size(18, 20);
+            label5.Size = new Size(16, 17);
             label5.TabIndex = 148;
             label5.Text = "/";
             // 
@@ -956,11 +946,10 @@
             C4MaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             C4MaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             C4MaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            C4MaxAmmoNumericBox.Location = new Point(282, 269);
-            C4MaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            C4MaxAmmoNumericBox.Location = new Point(247, 183);
             C4MaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             C4MaxAmmoNumericBox.Name = "C4MaxAmmoNumericBox";
-            C4MaxAmmoNumericBox.Size = new Size(79, 27);
+            C4MaxAmmoNumericBox.Size = new Size(69, 23);
             C4MaxAmmoNumericBox.TabIndex = 153;
             C4MaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -969,11 +958,10 @@
             C4AmmoNumericBox.BackColor = SystemColors.MenuText;
             C4AmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             C4AmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            C4AmmoNumericBox.Location = new Point(193, 269);
-            C4AmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            C4AmmoNumericBox.Location = new Point(169, 183);
             C4AmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             C4AmmoNumericBox.Name = "C4AmmoNumericBox";
-            C4AmmoNumericBox.Size = new Size(73, 27);
+            C4AmmoNumericBox.Size = new Size(64, 23);
             C4AmmoNumericBox.TabIndex = 152;
             C4AmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -983,9 +971,9 @@
             label6.BackColor = SystemColors.ActiveCaptionText;
             label6.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(265, 272);
+            label6.Location = new Point(232, 185);
             label6.Name = "label6";
-            label6.Size = new Size(18, 20);
+            label6.Size = new Size(16, 17);
             label6.TabIndex = 151;
             label6.Text = "/";
             // 
@@ -994,11 +982,10 @@
             StunGrenadeMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             StunGrenadeMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             StunGrenadeMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            StunGrenadeMaxAmmoNumericBox.Location = new Point(281, 420);
-            StunGrenadeMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            StunGrenadeMaxAmmoNumericBox.Location = new Point(246, 301);
             StunGrenadeMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             StunGrenadeMaxAmmoNumericBox.Name = "StunGrenadeMaxAmmoNumericBox";
-            StunGrenadeMaxAmmoNumericBox.Size = new Size(79, 27);
+            StunGrenadeMaxAmmoNumericBox.Size = new Size(69, 23);
             StunGrenadeMaxAmmoNumericBox.TabIndex = 156;
             StunGrenadeMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1007,11 +994,10 @@
             StunGrenadeAmmoNumericBox.BackColor = SystemColors.MenuText;
             StunGrenadeAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             StunGrenadeAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            StunGrenadeAmmoNumericBox.Location = new Point(191, 420);
-            StunGrenadeAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            StunGrenadeAmmoNumericBox.Location = new Point(167, 301);
             StunGrenadeAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             StunGrenadeAmmoNumericBox.Name = "StunGrenadeAmmoNumericBox";
-            StunGrenadeAmmoNumericBox.Size = new Size(73, 27);
+            StunGrenadeAmmoNumericBox.Size = new Size(64, 23);
             StunGrenadeAmmoNumericBox.TabIndex = 155;
             StunGrenadeAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1021,9 +1007,9 @@
             label7.BackColor = SystemColors.ActiveCaptionText;
             label7.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(263, 423);
+            label7.Location = new Point(230, 303);
             label7.Name = "label7";
-            label7.Size = new Size(18, 20);
+            label7.Size = new Size(16, 17);
             label7.TabIndex = 154;
             label7.Text = "/";
             // 
@@ -1032,11 +1018,10 @@
             ChaffGrenadeMaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             ChaffGrenadeMaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             ChaffGrenadeMaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            ChaffGrenadeMaxAmmoNumericBox.Location = new Point(280, 571);
-            ChaffGrenadeMaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            ChaffGrenadeMaxAmmoNumericBox.Location = new Point(245, 421);
             ChaffGrenadeMaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             ChaffGrenadeMaxAmmoNumericBox.Name = "ChaffGrenadeMaxAmmoNumericBox";
-            ChaffGrenadeMaxAmmoNumericBox.Size = new Size(79, 27);
+            ChaffGrenadeMaxAmmoNumericBox.Size = new Size(69, 23);
             ChaffGrenadeMaxAmmoNumericBox.TabIndex = 159;
             ChaffGrenadeMaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1045,11 +1030,10 @@
             ChaffGrenadeAmmoNumericBox.BackColor = SystemColors.MenuText;
             ChaffGrenadeAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             ChaffGrenadeAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            ChaffGrenadeAmmoNumericBox.Location = new Point(191, 571);
-            ChaffGrenadeAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            ChaffGrenadeAmmoNumericBox.Location = new Point(167, 421);
             ChaffGrenadeAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             ChaffGrenadeAmmoNumericBox.Name = "ChaffGrenadeAmmoNumericBox";
-            ChaffGrenadeAmmoNumericBox.Size = new Size(73, 27);
+            ChaffGrenadeAmmoNumericBox.Size = new Size(64, 23);
             ChaffGrenadeAmmoNumericBox.TabIndex = 158;
             ChaffGrenadeAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1059,9 +1043,9 @@
             label8.BackColor = SystemColors.ActiveCaptionText;
             label8.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(263, 574);
+            label8.Location = new Point(230, 423);
             label8.Name = "label8";
-            label8.Size = new Size(18, 20);
+            label8.Size = new Size(16, 17);
             label8.TabIndex = 157;
             label8.Text = "/";
             // 
@@ -1070,11 +1054,10 @@
             PSG1MaxAmmoNumericBox.BackColor = SystemColors.MenuText;
             PSG1MaxAmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             PSG1MaxAmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            PSG1MaxAmmoNumericBox.Location = new Point(96, 419);
-            PSG1MaxAmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            PSG1MaxAmmoNumericBox.Location = new Point(84, 300);
             PSG1MaxAmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             PSG1MaxAmmoNumericBox.Name = "PSG1MaxAmmoNumericBox";
-            PSG1MaxAmmoNumericBox.Size = new Size(79, 27);
+            PSG1MaxAmmoNumericBox.Size = new Size(69, 23);
             PSG1MaxAmmoNumericBox.TabIndex = 162;
             PSG1MaxAmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1083,11 +1066,10 @@
             PSG1AmmoNumericBox.BackColor = SystemColors.MenuText;
             PSG1AmmoNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             PSG1AmmoNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            PSG1AmmoNumericBox.Location = new Point(10, 419);
-            PSG1AmmoNumericBox.Margin = new Padding(3, 4, 3, 4);
+            PSG1AmmoNumericBox.Location = new Point(9, 300);
             PSG1AmmoNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             PSG1AmmoNumericBox.Name = "PSG1AmmoNumericBox";
-            PSG1AmmoNumericBox.Size = new Size(73, 27);
+            PSG1AmmoNumericBox.Size = new Size(64, 23);
             PSG1AmmoNumericBox.TabIndex = 161;
             PSG1AmmoNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1097,9 +1079,9 @@
             label9.BackColor = SystemColors.ActiveCaptionText;
             label9.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(80, 421);
+            label9.Location = new Point(70, 302);
             label9.Name = "label9";
-            label9.Size = new Size(18, 20);
+            label9.Size = new Size(16, 17);
             label9.TabIndex = 160;
             label9.Text = "/";
             // 
@@ -1108,11 +1090,10 @@
             RationMaxCountNumericBox.BackColor = SystemColors.MenuText;
             RationMaxCountNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             RationMaxCountNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            RationMaxCountNumericBox.Location = new Point(466, 116);
-            RationMaxCountNumericBox.Margin = new Padding(3, 4, 3, 4);
+            RationMaxCountNumericBox.Location = new Point(408, 65);
             RationMaxCountNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             RationMaxCountNumericBox.Name = "RationMaxCountNumericBox";
-            RationMaxCountNumericBox.Size = new Size(79, 27);
+            RationMaxCountNumericBox.Size = new Size(69, 23);
             RationMaxCountNumericBox.TabIndex = 165;
             RationMaxCountNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1121,11 +1102,10 @@
             RationCountNumericBox.BackColor = SystemColors.MenuText;
             RationCountNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             RationCountNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            RationCountNumericBox.Location = new Point(376, 116);
-            RationCountNumericBox.Margin = new Padding(3, 4, 3, 4);
+            RationCountNumericBox.Location = new Point(329, 65);
             RationCountNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             RationCountNumericBox.Name = "RationCountNumericBox";
-            RationCountNumericBox.Size = new Size(73, 27);
+            RationCountNumericBox.Size = new Size(64, 23);
             RationCountNumericBox.TabIndex = 164;
             RationCountNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1135,9 +1115,9 @@
             label10.BackColor = SystemColors.ActiveCaptionText;
             label10.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label10.ForeColor = SystemColors.ButtonFace;
-            label10.Location = new Point(448, 118);
+            label10.Location = new Point(392, 66);
             label10.Name = "label10";
-            label10.Size = new Size(18, 20);
+            label10.Size = new Size(16, 17);
             label10.TabIndex = 163;
             label10.Text = "/";
             // 
@@ -1146,11 +1126,10 @@
             MedicineMaxCountNumericBox.BackColor = SystemColors.MenuText;
             MedicineMaxCountNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             MedicineMaxCountNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            MedicineMaxCountNumericBox.Location = new Point(466, 270);
-            MedicineMaxCountNumericBox.Margin = new Padding(3, 4, 3, 4);
+            MedicineMaxCountNumericBox.Location = new Point(408, 183);
             MedicineMaxCountNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             MedicineMaxCountNumericBox.Name = "MedicineMaxCountNumericBox";
-            MedicineMaxCountNumericBox.Size = new Size(79, 27);
+            MedicineMaxCountNumericBox.Size = new Size(69, 23);
             MedicineMaxCountNumericBox.TabIndex = 168;
             MedicineMaxCountNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1159,11 +1138,10 @@
             MedicineCountNumericBox.BackColor = SystemColors.MenuText;
             MedicineCountNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             MedicineCountNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            MedicineCountNumericBox.Location = new Point(377, 270);
-            MedicineCountNumericBox.Margin = new Padding(3, 4, 3, 4);
+            MedicineCountNumericBox.Location = new Point(330, 183);
             MedicineCountNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             MedicineCountNumericBox.Name = "MedicineCountNumericBox";
-            MedicineCountNumericBox.Size = new Size(73, 27);
+            MedicineCountNumericBox.Size = new Size(64, 23);
             MedicineCountNumericBox.TabIndex = 167;
             MedicineCountNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1173,9 +1151,9 @@
             label11.BackColor = SystemColors.ActiveCaptionText;
             label11.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label11.ForeColor = SystemColors.ButtonFace;
-            label11.Location = new Point(448, 272);
+            label11.Location = new Point(392, 185);
             label11.Name = "label11";
-            label11.Size = new Size(18, 20);
+            label11.Size = new Size(16, 17);
             label11.TabIndex = 166;
             label11.Text = "/";
             // 
@@ -1184,11 +1162,10 @@
             DiazapamMaxCountNumericBox.BackColor = SystemColors.MenuText;
             DiazapamMaxCountNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             DiazapamMaxCountNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            DiazapamMaxCountNumericBox.Location = new Point(469, 420);
-            DiazapamMaxCountNumericBox.Margin = new Padding(3, 4, 3, 4);
+            DiazapamMaxCountNumericBox.Location = new Point(410, 301);
             DiazapamMaxCountNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             DiazapamMaxCountNumericBox.Name = "DiazapamMaxCountNumericBox";
-            DiazapamMaxCountNumericBox.Size = new Size(79, 27);
+            DiazapamMaxCountNumericBox.Size = new Size(69, 23);
             DiazapamMaxCountNumericBox.TabIndex = 171;
             DiazapamMaxCountNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1197,11 +1174,10 @@
             DiazapamCountNumericBox.BackColor = SystemColors.MenuText;
             DiazapamCountNumericBox.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             DiazapamCountNumericBox.ForeColor = SystemColors.ButtonHighlight;
-            DiazapamCountNumericBox.Location = new Point(379, 420);
-            DiazapamCountNumericBox.Margin = new Padding(3, 4, 3, 4);
+            DiazapamCountNumericBox.Location = new Point(332, 301);
             DiazapamCountNumericBox.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             DiazapamCountNumericBox.Name = "DiazapamCountNumericBox";
-            DiazapamCountNumericBox.Size = new Size(73, 27);
+            DiazapamCountNumericBox.Size = new Size(64, 23);
             DiazapamCountNumericBox.TabIndex = 170;
             DiazapamCountNumericBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1211,88 +1187,681 @@
             label12.BackColor = SystemColors.ActiveCaptionText;
             label12.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
             label12.ForeColor = SystemColors.ButtonFace;
-            label12.Location = new Point(451, 423);
+            label12.Location = new Point(395, 303);
             label12.Name = "label12";
-            label12.Size = new Size(18, 20);
+            label12.Size = new Size(16, 17);
             label12.TabIndex = 169;
             label12.Text = "/";
             // 
-            // button1
+            // EnableStealthCamo
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(377, 572);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(81, 60);
-            button1.TabIndex = 172;
-            button1.Text = "Enable Stealth";
-            button1.UseVisualStyleBackColor = false;
+            EnableStealthCamo.BackColor = Color.Transparent;
+            EnableStealthCamo.BackgroundImage = (Image)resources.GetObject("EnableStealthCamo.BackgroundImage");
+            EnableStealthCamo.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableStealthCamo.Cursor = Cursors.Hand;
+            EnableStealthCamo.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableStealthCamo.ForeColor = SystemColors.ActiveCaptionText;
+            EnableStealthCamo.Location = new Point(167, 662);
+            EnableStealthCamo.Name = "EnableStealthCamo";
+            EnableStealthCamo.Size = new Size(74, 45);
+            EnableStealthCamo.TabIndex = 172;
+            EnableStealthCamo.Text = "Enable Stealth";
+            EnableStealthCamo.UseVisualStyleBackColor = false;
+            EnableStealthCamo.Click += EnableStealthCamo_Click;
             // 
-            // button2
+            // DisableStealthCamo
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(461, 572);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 60);
-            button2.TabIndex = 173;
-            button2.Text = "Disable Stealth";
-            button2.UseVisualStyleBackColor = false;
+            DisableStealthCamo.BackColor = Color.Transparent;
+            DisableStealthCamo.BackgroundImage = (Image)resources.GetObject("DisableStealthCamo.BackgroundImage");
+            DisableStealthCamo.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableStealthCamo.Cursor = Cursors.Hand;
+            DisableStealthCamo.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableStealthCamo.ForeColor = SystemColors.ActiveCaptionText;
+            DisableStealthCamo.Location = new Point(240, 662);
+            DisableStealthCamo.Name = "DisableStealthCamo";
+            DisableStealthCamo.Size = new Size(74, 45);
+            DisableStealthCamo.TabIndex = 173;
+            DisableStealthCamo.Text = "Disable Stealth";
+            DisableStealthCamo.UseVisualStyleBackColor = false;
+            DisableStealthCamo.Click += DisableStealthCamo_Click;
             // 
-            // button3
+            // DisableBandana
             // 
-            button3.BackColor = Color.Transparent;
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Cursor = Cursors.Hand;
-            button3.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(461, 726);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(84, 60);
-            button3.TabIndex = 176;
-            button3.Text = "Disable Bandana";
-            button3.UseVisualStyleBackColor = false;
+            DisableBandana.BackColor = Color.Transparent;
+            DisableBandana.BackgroundImage = (Image)resources.GetObject("DisableBandana.BackgroundImage");
+            DisableBandana.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableBandana.Cursor = Cursors.Hand;
+            DisableBandana.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableBandana.ForeColor = SystemColors.ActiveCaptionText;
+            DisableBandana.Location = new Point(79, 662);
+            DisableBandana.Name = "DisableBandana";
+            DisableBandana.Size = new Size(74, 45);
+            DisableBandana.TabIndex = 176;
+            DisableBandana.Text = "Disable Bandana";
+            DisableBandana.UseVisualStyleBackColor = false;
+            DisableBandana.Click += DisableBandana_Click;
             // 
-            // button4
+            // EnableBandana
             // 
-            button4.BackColor = Color.Transparent;
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.Cursor = Cursors.Hand;
-            button4.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
-            button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(377, 726);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(81, 60);
-            button4.TabIndex = 175;
-            button4.Text = "Enable Bandana";
-            button4.UseVisualStyleBackColor = false;
+            EnableBandana.BackColor = Color.Transparent;
+            EnableBandana.BackgroundImage = (Image)resources.GetObject("EnableBandana.BackgroundImage");
+            EnableBandana.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableBandana.Cursor = Cursors.Hand;
+            EnableBandana.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableBandana.ForeColor = SystemColors.ActiveCaptionText;
+            EnableBandana.Location = new Point(6, 662);
+            EnableBandana.Name = "EnableBandana";
+            EnableBandana.Size = new Size(74, 45);
+            EnableBandana.TabIndex = 175;
+            EnableBandana.Text = "Enable Bandana";
+            EnableBandana.UseVisualStyleBackColor = false;
+            EnableBandana.Click += EnableBandana_Click;
+            // 
+            // DisableBoxA
+            // 
+            DisableBoxA.BackColor = Color.Transparent;
+            DisableBoxA.BackgroundImage = (Image)resources.GetObject("DisableBoxA.BackgroundImage");
+            DisableBoxA.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableBoxA.Cursor = Cursors.Hand;
+            DisableBoxA.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableBoxA.ForeColor = SystemColors.ActiveCaptionText;
+            DisableBoxA.Location = new Point(406, 427);
+            DisableBoxA.Name = "DisableBoxA";
+            DisableBoxA.Size = new Size(74, 45);
+            DisableBoxA.TabIndex = 178;
+            DisableBoxA.Text = "Disable Box A";
+            DisableBoxA.UseVisualStyleBackColor = false;
+            DisableBoxA.Click += DisableBoxA_Click;
+            // 
+            // EnableBoxA
+            // 
+            EnableBoxA.BackColor = Color.Transparent;
+            EnableBoxA.BackgroundImage = (Image)resources.GetObject("EnableBoxA.BackgroundImage");
+            EnableBoxA.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableBoxA.Cursor = Cursors.Hand;
+            EnableBoxA.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableBoxA.ForeColor = SystemColors.ActiveCaptionText;
+            EnableBoxA.Location = new Point(332, 427);
+            EnableBoxA.Name = "EnableBoxA";
+            EnableBoxA.Size = new Size(74, 45);
+            EnableBoxA.TabIndex = 177;
+            EnableBoxA.Text = "Enable Box A";
+            EnableBoxA.UseVisualStyleBackColor = false;
+            EnableBoxA.Click += EnableBoxA_Click;
+            // 
+            // DisableBoxB
+            // 
+            DisableBoxB.BackColor = Color.Transparent;
+            DisableBoxB.BackgroundImage = (Image)resources.GetObject("DisableBoxB.BackgroundImage");
+            DisableBoxB.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableBoxB.Cursor = Cursors.Hand;
+            DisableBoxB.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableBoxB.ForeColor = SystemColors.ActiveCaptionText;
+            DisableBoxB.Location = new Point(406, 544);
+            DisableBoxB.Name = "DisableBoxB";
+            DisableBoxB.Size = new Size(74, 45);
+            DisableBoxB.TabIndex = 180;
+            DisableBoxB.Text = "Disable Box B";
+            DisableBoxB.UseVisualStyleBackColor = false;
+            DisableBoxB.Click += DisableBoxB_Click;
+            // 
+            // EnableBoxB
+            // 
+            EnableBoxB.BackColor = Color.Transparent;
+            EnableBoxB.BackgroundImage = (Image)resources.GetObject("EnableBoxB.BackgroundImage");
+            EnableBoxB.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableBoxB.Cursor = Cursors.Hand;
+            EnableBoxB.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableBoxB.ForeColor = SystemColors.ActiveCaptionText;
+            EnableBoxB.Location = new Point(332, 544);
+            EnableBoxB.Name = "EnableBoxB";
+            EnableBoxB.Size = new Size(74, 45);
+            EnableBoxB.TabIndex = 179;
+            EnableBoxB.Text = "Enable Box B";
+            EnableBoxB.UseVisualStyleBackColor = false;
+            EnableBoxB.Click += EnableBoxB_Click;
+            // 
+            // DisableBoxC
+            // 
+            DisableBoxC.BackColor = Color.Transparent;
+            DisableBoxC.BackgroundImage = (Image)resources.GetObject("DisableBoxC.BackgroundImage");
+            DisableBoxC.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableBoxC.Cursor = Cursors.Hand;
+            DisableBoxC.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableBoxC.ForeColor = SystemColors.ActiveCaptionText;
+            DisableBoxC.Location = new Point(407, 663);
+            DisableBoxC.Name = "DisableBoxC";
+            DisableBoxC.Size = new Size(74, 45);
+            DisableBoxC.TabIndex = 182;
+            DisableBoxC.Text = "Disable Box C";
+            DisableBoxC.UseVisualStyleBackColor = false;
+            DisableBoxC.Click += DisableBoxC_Click;
+            // 
+            // EnableBoxC
+            // 
+            EnableBoxC.BackColor = Color.Transparent;
+            EnableBoxC.BackgroundImage = (Image)resources.GetObject("EnableBoxC.BackgroundImage");
+            EnableBoxC.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableBoxC.Cursor = Cursors.Hand;
+            EnableBoxC.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableBoxC.ForeColor = SystemColors.ActiveCaptionText;
+            EnableBoxC.Location = new Point(333, 663);
+            EnableBoxC.Name = "EnableBoxC";
+            EnableBoxC.Size = new Size(74, 45);
+            EnableBoxC.TabIndex = 181;
+            EnableBoxC.Text = "Enable Box C";
+            EnableBoxC.UseVisualStyleBackColor = false;
+            EnableBoxC.Click += EnableBoxC_Click;
+            // 
+            // pictureBox29
+            // 
+            pictureBox29.BackgroundImage = (Image)resources.GetObject("pictureBox29.BackgroundImage");
+            pictureBox29.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox29.Location = new Point(486, 476);
+            pictureBox29.Name = "pictureBox29";
+            pictureBox29.Size = new Size(148, 90);
+            pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox29.TabIndex = 183;
+            pictureBox29.TabStop = false;
+            // 
+            // DisableBodyArmor
+            // 
+            DisableBodyArmor.BackColor = Color.Transparent;
+            DisableBodyArmor.BackgroundImage = (Image)resources.GetObject("DisableBodyArmor.BackgroundImage");
+            DisableBodyArmor.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableBodyArmor.Cursor = Cursors.Hand;
+            DisableBodyArmor.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableBodyArmor.ForeColor = SystemColors.ActiveCaptionText;
+            DisableBodyArmor.Location = new Point(563, 70);
+            DisableBodyArmor.Name = "DisableBodyArmor";
+            DisableBodyArmor.Size = new Size(74, 45);
+            DisableBodyArmor.TabIndex = 185;
+            DisableBodyArmor.Text = "Disable B.Armor";
+            DisableBodyArmor.UseVisualStyleBackColor = false;
+            DisableBodyArmor.Click += DisableBodyArmor_Click;
+            // 
+            // EnableBodyArmor
+            // 
+            EnableBodyArmor.BackColor = Color.Transparent;
+            EnableBodyArmor.BackgroundImage = (Image)resources.GetObject("EnableBodyArmor.BackgroundImage");
+            EnableBodyArmor.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableBodyArmor.Cursor = Cursors.Hand;
+            EnableBodyArmor.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableBodyArmor.ForeColor = SystemColors.ActiveCaptionText;
+            EnableBodyArmor.Location = new Point(489, 70);
+            EnableBodyArmor.Name = "EnableBodyArmor";
+            EnableBodyArmor.Size = new Size(74, 45);
+            EnableBodyArmor.TabIndex = 184;
+            EnableBodyArmor.Text = "Enable B.Armor";
+            EnableBodyArmor.UseVisualStyleBackColor = false;
+            EnableBodyArmor.Click += EnableBodyArmor_Click;
+            // 
+            // DisableMineD
+            // 
+            DisableMineD.BackColor = Color.Transparent;
+            DisableMineD.BackgroundImage = (Image)resources.GetObject("DisableMineD.BackgroundImage");
+            DisableMineD.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableMineD.Cursor = Cursors.Hand;
+            DisableMineD.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableMineD.ForeColor = SystemColors.ActiveCaptionText;
+            DisableMineD.Location = new Point(563, 189);
+            DisableMineD.Name = "DisableMineD";
+            DisableMineD.Size = new Size(74, 45);
+            DisableMineD.TabIndex = 187;
+            DisableMineD.Text = "Disable Mine.D";
+            DisableMineD.UseVisualStyleBackColor = false;
+            DisableMineD.Click += DisableMineD_Click;
+            // 
+            // EnableMineD
+            // 
+            EnableMineD.BackColor = Color.Transparent;
+            EnableMineD.BackgroundImage = (Image)resources.GetObject("EnableMineD.BackgroundImage");
+            EnableMineD.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableMineD.Cursor = Cursors.Hand;
+            EnableMineD.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableMineD.ForeColor = SystemColors.ActiveCaptionText;
+            EnableMineD.Location = new Point(489, 189);
+            EnableMineD.Name = "EnableMineD";
+            EnableMineD.Size = new Size(74, 45);
+            EnableMineD.TabIndex = 186;
+            EnableMineD.Text = "Enable Mine.D";
+            EnableMineD.UseVisualStyleBackColor = false;
+            EnableMineD.Click += EnableMineD_Click;
+            // 
+            // DisableGasmask
+            // 
+            DisableGasmask.BackColor = Color.Transparent;
+            DisableGasmask.BackgroundImage = (Image)resources.GetObject("DisableGasmask.BackgroundImage");
+            DisableGasmask.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableGasmask.Cursor = Cursors.Hand;
+            DisableGasmask.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableGasmask.ForeColor = SystemColors.ActiveCaptionText;
+            DisableGasmask.Location = new Point(563, 306);
+            DisableGasmask.Name = "DisableGasmask";
+            DisableGasmask.Size = new Size(74, 45);
+            DisableGasmask.TabIndex = 189;
+            DisableGasmask.Text = "Disable Gasmask";
+            DisableGasmask.UseVisualStyleBackColor = false;
+            DisableGasmask.Click += DisableGasmask_Click;
+            // 
+            // EnableGasmask
+            // 
+            EnableGasmask.BackColor = Color.Transparent;
+            EnableGasmask.BackgroundImage = (Image)resources.GetObject("EnableGasmask.BackgroundImage");
+            EnableGasmask.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableGasmask.Cursor = Cursors.Hand;
+            EnableGasmask.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableGasmask.ForeColor = SystemColors.ActiveCaptionText;
+            EnableGasmask.Location = new Point(489, 306);
+            EnableGasmask.Name = "EnableGasmask";
+            EnableGasmask.Size = new Size(74, 45);
+            EnableGasmask.TabIndex = 188;
+            EnableGasmask.Text = "Enable Gasmask";
+            EnableGasmask.UseVisualStyleBackColor = false;
+            EnableGasmask.Click += EnableGasmask_Click;
+            // 
+            // DisableNvg
+            // 
+            DisableNvg.BackColor = Color.Transparent;
+            DisableNvg.BackgroundImage = (Image)resources.GetObject("DisableNvg.BackgroundImage");
+            DisableNvg.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableNvg.Cursor = Cursors.Hand;
+            DisableNvg.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableNvg.ForeColor = SystemColors.ActiveCaptionText;
+            DisableNvg.Location = new Point(563, 425);
+            DisableNvg.Name = "DisableNvg";
+            DisableNvg.Size = new Size(74, 45);
+            DisableNvg.TabIndex = 191;
+            DisableNvg.Text = "Disable NVG";
+            DisableNvg.UseVisualStyleBackColor = false;
+            DisableNvg.Click += DisableNvg_Click;
+            // 
+            // EnableNvg
+            // 
+            EnableNvg.BackColor = Color.Transparent;
+            EnableNvg.BackgroundImage = (Image)resources.GetObject("EnableNvg.BackgroundImage");
+            EnableNvg.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableNvg.Cursor = Cursors.Hand;
+            EnableNvg.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableNvg.ForeColor = SystemColors.ActiveCaptionText;
+            EnableNvg.Location = new Point(489, 425);
+            EnableNvg.Name = "EnableNvg";
+            EnableNvg.Size = new Size(74, 45);
+            EnableNvg.TabIndex = 190;
+            EnableNvg.Text = "Enable NVG";
+            EnableNvg.UseVisualStyleBackColor = false;
+            EnableNvg.Click += EnableNvg_Click;
+            // 
+            // DisableThermal
+            // 
+            DisableThermal.BackColor = Color.Transparent;
+            DisableThermal.BackgroundImage = (Image)resources.GetObject("DisableThermal.BackgroundImage");
+            DisableThermal.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableThermal.Cursor = Cursors.Hand;
+            DisableThermal.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableThermal.ForeColor = SystemColors.ActiveCaptionText;
+            DisableThermal.Location = new Point(563, 542);
+            DisableThermal.Name = "DisableThermal";
+            DisableThermal.Size = new Size(74, 45);
+            DisableThermal.TabIndex = 193;
+            DisableThermal.Text = "Disable Thermal";
+            DisableThermal.UseVisualStyleBackColor = false;
+            DisableThermal.Click += DisableThermal_Click;
+            // 
+            // EnableThermal
+            // 
+            EnableThermal.BackColor = Color.Transparent;
+            EnableThermal.BackgroundImage = (Image)resources.GetObject("EnableThermal.BackgroundImage");
+            EnableThermal.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableThermal.Cursor = Cursors.Hand;
+            EnableThermal.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableThermal.ForeColor = SystemColors.ActiveCaptionText;
+            EnableThermal.Location = new Point(489, 542);
+            EnableThermal.Name = "EnableThermal";
+            EnableThermal.Size = new Size(74, 45);
+            EnableThermal.TabIndex = 192;
+            EnableThermal.Text = "Enable Thermal";
+            EnableThermal.UseVisualStyleBackColor = false;
+            EnableThermal.Click += EnableThermal_Click;
+            // 
+            // DisableScope
+            // 
+            DisableScope.BackColor = Color.Transparent;
+            DisableScope.BackgroundImage = (Image)resources.GetObject("DisableScope.BackgroundImage");
+            DisableScope.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableScope.Cursor = Cursors.Hand;
+            DisableScope.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableScope.ForeColor = SystemColors.ActiveCaptionText;
+            DisableScope.Location = new Point(563, 662);
+            DisableScope.Name = "DisableScope";
+            DisableScope.Size = new Size(74, 45);
+            DisableScope.TabIndex = 195;
+            DisableScope.Text = "Disable Scope";
+            DisableScope.UseVisualStyleBackColor = false;
+            DisableScope.Click += DisableScope_Click;
+            // 
+            // EnableScope
+            // 
+            EnableScope.BackColor = Color.Transparent;
+            EnableScope.BackgroundImage = (Image)resources.GetObject("EnableScope.BackgroundImage");
+            EnableScope.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableScope.Cursor = Cursors.Hand;
+            EnableScope.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableScope.ForeColor = SystemColors.ActiveCaptionText;
+            EnableScope.Location = new Point(489, 662);
+            EnableScope.Name = "EnableScope";
+            EnableScope.Size = new Size(74, 45);
+            EnableScope.TabIndex = 194;
+            EnableScope.Text = "Enable Scope";
+            EnableScope.UseVisualStyleBackColor = false;
+            EnableScope.Click += EnableScope_Click;
+            // 
+            // pictureBox30
+            // 
+            pictureBox30.BackgroundImage = (Image)resources.GetObject("pictureBox30.BackgroundImage");
+            pictureBox30.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox30.Location = new Point(651, 594);
+            pictureBox30.Name = "pictureBox30";
+            pictureBox30.Size = new Size(148, 90);
+            pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox30.TabIndex = 196;
+            pictureBox30.TabStop = false;
+            // 
+            // DisableCigs
+            // 
+            DisableCigs.BackColor = Color.Transparent;
+            DisableCigs.BackgroundImage = (Image)resources.GetObject("DisableCigs.BackgroundImage");
+            DisableCigs.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableCigs.Cursor = Cursors.Hand;
+            DisableCigs.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableCigs.ForeColor = SystemColors.ActiveCaptionText;
+            DisableCigs.Location = new Point(725, 69);
+            DisableCigs.Name = "DisableCigs";
+            DisableCigs.Size = new Size(74, 45);
+            DisableCigs.TabIndex = 198;
+            DisableCigs.Text = "Disable Cigs";
+            DisableCigs.UseVisualStyleBackColor = false;
+            DisableCigs.Click += DisableCigs_Click;
+            // 
+            // EnableCigs
+            // 
+            EnableCigs.BackColor = Color.Transparent;
+            EnableCigs.BackgroundImage = (Image)resources.GetObject("EnableCigs.BackgroundImage");
+            EnableCigs.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableCigs.Cursor = Cursors.Hand;
+            EnableCigs.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableCigs.ForeColor = SystemColors.ActiveCaptionText;
+            EnableCigs.Location = new Point(651, 69);
+            EnableCigs.Name = "EnableCigs";
+            EnableCigs.Size = new Size(74, 45);
+            EnableCigs.TabIndex = 197;
+            EnableCigs.Text = "Enable Cigs";
+            EnableCigs.UseVisualStyleBackColor = false;
+            EnableCigs.Click += EnableCigs_Click;
+            // 
+            // DisableHandkerchief
+            // 
+            DisableHandkerchief.BackColor = Color.Transparent;
+            DisableHandkerchief.BackgroundImage = (Image)resources.GetObject("DisableHandkerchief.BackgroundImage");
+            DisableHandkerchief.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableHandkerchief.Cursor = Cursors.Hand;
+            DisableHandkerchief.Font = new Font("Consolas", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DisableHandkerchief.ForeColor = SystemColors.ActiveCaptionText;
+            DisableHandkerchief.Location = new Point(651, 443);
+            DisableHandkerchief.Name = "DisableHandkerchief";
+            DisableHandkerchief.Size = new Size(148, 28);
+            DisableHandkerchief.TabIndex = 200;
+            DisableHandkerchief.Text = "Disable Handkerchief";
+            DisableHandkerchief.UseVisualStyleBackColor = false;
+            DisableHandkerchief.Click += DisableHandkerchief_Click;
+            // 
+            // EnableHandkerchief
+            // 
+            EnableHandkerchief.BackColor = Color.Transparent;
+            EnableHandkerchief.BackgroundImage = (Image)resources.GetObject("EnableHandkerchief.BackgroundImage");
+            EnableHandkerchief.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableHandkerchief.Cursor = Cursors.Hand;
+            EnableHandkerchief.Font = new Font("Consolas", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EnableHandkerchief.ForeColor = SystemColors.ActiveCaptionText;
+            EnableHandkerchief.Location = new Point(651, 417);
+            EnableHandkerchief.Name = "EnableHandkerchief";
+            EnableHandkerchief.Size = new Size(148, 27);
+            EnableHandkerchief.TabIndex = 199;
+            EnableHandkerchief.Text = "Enable Handkerchief";
+            EnableHandkerchief.UseVisualStyleBackColor = false;
+            EnableHandkerchief.Click += EnableHandkerchief_Click;
+            // 
+            // DisableKetchup
+            // 
+            DisableKetchup.BackColor = Color.Transparent;
+            DisableKetchup.BackgroundImage = (Image)resources.GetObject("DisableKetchup.BackgroundImage");
+            DisableKetchup.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableKetchup.Cursor = Cursors.Hand;
+            DisableKetchup.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableKetchup.ForeColor = SystemColors.ActiveCaptionText;
+            DisableKetchup.Location = new Point(725, 186);
+            DisableKetchup.Name = "DisableKetchup";
+            DisableKetchup.Size = new Size(74, 45);
+            DisableKetchup.TabIndex = 202;
+            DisableKetchup.Text = "Disable Ketchup";
+            DisableKetchup.UseVisualStyleBackColor = false;
+            DisableKetchup.Click += DisableKetchup_Click;
+            // 
+            // EnableKetchup
+            // 
+            EnableKetchup.BackColor = Color.Transparent;
+            EnableKetchup.BackgroundImage = (Image)resources.GetObject("EnableKetchup.BackgroundImage");
+            EnableKetchup.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableKetchup.Cursor = Cursors.Hand;
+            EnableKetchup.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableKetchup.ForeColor = SystemColors.ActiveCaptionText;
+            EnableKetchup.Location = new Point(651, 186);
+            EnableKetchup.Name = "EnableKetchup";
+            EnableKetchup.Size = new Size(74, 45);
+            EnableKetchup.TabIndex = 201;
+            EnableKetchup.Text = "Enable Ketchup";
+            EnableKetchup.UseVisualStyleBackColor = false;
+            EnableKetchup.Click += EnableKetchup_Click;
+            // 
+            // DisableRope
+            // 
+            DisableRope.BackColor = Color.Transparent;
+            DisableRope.BackgroundImage = (Image)resources.GetObject("DisableRope.BackgroundImage");
+            DisableRope.BackgroundImageLayout = ImageLayout.Stretch;
+            DisableRope.Cursor = Cursors.Hand;
+            DisableRope.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            DisableRope.ForeColor = SystemColors.ActiveCaptionText;
+            DisableRope.Location = new Point(725, 305);
+            DisableRope.Name = "DisableRope";
+            DisableRope.Size = new Size(74, 45);
+            DisableRope.TabIndex = 204;
+            DisableRope.Text = "Disable Rope";
+            DisableRope.UseVisualStyleBackColor = false;
+            DisableRope.Click += DisableRope_Click;
+            // 
+            // EnableRope
+            // 
+            EnableRope.BackColor = Color.Transparent;
+            EnableRope.BackgroundImage = (Image)resources.GetObject("EnableRope.BackgroundImage");
+            EnableRope.BackgroundImageLayout = ImageLayout.Stretch;
+            EnableRope.Cursor = Cursors.Hand;
+            EnableRope.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            EnableRope.ForeColor = SystemColors.ActiveCaptionText;
+            EnableRope.Location = new Point(651, 305);
+            EnableRope.Name = "EnableRope";
+            EnableRope.Size = new Size(74, 45);
+            EnableRope.TabIndex = 203;
+            EnableRope.Text = "Enable Rope";
+            EnableRope.UseVisualStyleBackColor = false;
+            EnableRope.Click += EnableRope_Click;
+            // 
+            // ChangePalKeyToNormalTemp
+            // 
+            ChangePalKeyToNormalTemp.BackColor = Color.Transparent;
+            ChangePalKeyToNormalTemp.BackgroundImage = (Image)resources.GetObject("ChangePalKeyToNormalTemp.BackgroundImage");
+            ChangePalKeyToNormalTemp.BackgroundImageLayout = ImageLayout.Stretch;
+            ChangePalKeyToNormalTemp.Cursor = Cursors.Hand;
+            ChangePalKeyToNormalTemp.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            ChangePalKeyToNormalTemp.ForeColor = SystemColors.ActiveCaptionText;
+            ChangePalKeyToNormalTemp.Location = new Point(651, 528);
+            ChangePalKeyToNormalTemp.Name = "ChangePalKeyToNormalTemp";
+            ChangePalKeyToNormalTemp.Size = new Size(74, 33);
+            ChangePalKeyToNormalTemp.TabIndex = 206;
+            ChangePalKeyToNormalTemp.Text = "Normal";
+            ChangePalKeyToNormalTemp.UseVisualStyleBackColor = false;
+            ChangePalKeyToNormalTemp.Click += ChangePalKeyToNormalTemp_Click;
+            // 
+            // ChangePalKeyToHotTemp
+            // 
+            ChangePalKeyToHotTemp.BackColor = Color.Transparent;
+            ChangePalKeyToHotTemp.BackgroundImage = (Image)resources.GetObject("ChangePalKeyToHotTemp.BackgroundImage");
+            ChangePalKeyToHotTemp.BackgroundImageLayout = ImageLayout.Stretch;
+            ChangePalKeyToHotTemp.Cursor = Cursors.Hand;
+            ChangePalKeyToHotTemp.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            ChangePalKeyToHotTemp.ForeColor = SystemColors.ActiveCaptionText;
+            ChangePalKeyToHotTemp.Location = new Point(651, 559);
+            ChangePalKeyToHotTemp.Name = "ChangePalKeyToHotTemp";
+            ChangePalKeyToHotTemp.Size = new Size(148, 26);
+            ChangePalKeyToHotTemp.TabIndex = 205;
+            ChangePalKeyToHotTemp.Text = "Hot";
+            ChangePalKeyToHotTemp.UseVisualStyleBackColor = false;
+            ChangePalKeyToHotTemp.Click += ChangePalKeyToHotTemp_Click;
+            // 
+            // Minus1ToKeycardLevel
+            // 
+            Minus1ToKeycardLevel.BackColor = Color.Transparent;
+            Minus1ToKeycardLevel.BackgroundImage = (Image)resources.GetObject("Minus1ToKeycardLevel.BackgroundImage");
+            Minus1ToKeycardLevel.BackgroundImageLayout = ImageLayout.Stretch;
+            Minus1ToKeycardLevel.Cursor = Cursors.Hand;
+            Minus1ToKeycardLevel.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            Minus1ToKeycardLevel.ForeColor = SystemColors.ActiveCaptionText;
+            Minus1ToKeycardLevel.Location = new Point(651, 680);
+            Minus1ToKeycardLevel.Name = "Minus1ToKeycardLevel";
+            Minus1ToKeycardLevel.Size = new Size(148, 26);
+            Minus1ToKeycardLevel.TabIndex = 208;
+            Minus1ToKeycardLevel.Text = "-1 to Keycard level";
+            Minus1ToKeycardLevel.UseVisualStyleBackColor = false;
+            Minus1ToKeycardLevel.Click += Minus1ToKeycardLevel_Click;
+            // 
+            // Add1ToKeycardLevel
+            // 
+            Add1ToKeycardLevel.BackColor = Color.Transparent;
+            Add1ToKeycardLevel.BackgroundImage = (Image)resources.GetObject("Add1ToKeycardLevel.BackgroundImage");
+            Add1ToKeycardLevel.BackgroundImageLayout = ImageLayout.Stretch;
+            Add1ToKeycardLevel.Cursor = Cursors.Hand;
+            Add1ToKeycardLevel.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            Add1ToKeycardLevel.ForeColor = SystemColors.ActiveCaptionText;
+            Add1ToKeycardLevel.Location = new Point(651, 655);
+            Add1ToKeycardLevel.Name = "Add1ToKeycardLevel";
+            Add1ToKeycardLevel.Size = new Size(148, 26);
+            Add1ToKeycardLevel.TabIndex = 207;
+            Add1ToKeycardLevel.Text = "+1 to Keycard Level";
+            Add1ToKeycardLevel.UseVisualStyleBackColor = false;
+            Add1ToKeycardLevel.Click += Add1ToKeycardLevel_Click;
+            // 
+            // ChangePalKeyToColdTemp
+            // 
+            ChangePalKeyToColdTemp.BackColor = Color.Transparent;
+            ChangePalKeyToColdTemp.BackgroundImage = (Image)resources.GetObject("ChangePalKeyToColdTemp.BackgroundImage");
+            ChangePalKeyToColdTemp.BackgroundImageLayout = ImageLayout.Stretch;
+            ChangePalKeyToColdTemp.Cursor = Cursors.Hand;
+            ChangePalKeyToColdTemp.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            ChangePalKeyToColdTemp.ForeColor = SystemColors.ActiveCaptionText;
+            ChangePalKeyToColdTemp.Location = new Point(725, 528);
+            ChangePalKeyToColdTemp.Name = "ChangePalKeyToColdTemp";
+            ChangePalKeyToColdTemp.Size = new Size(74, 33);
+            ChangePalKeyToColdTemp.TabIndex = 209;
+            ChangePalKeyToColdTemp.Text = "Cold";
+            ChangePalKeyToColdTemp.UseVisualStyleBackColor = false;
+            ChangePalKeyToColdTemp.Click += ChangePalKeyToColdTemp_Click;
+            // 
+            // TimeBombNumerical
+            // 
+            TimeBombNumerical.BackColor = SystemColors.MenuText;
+            TimeBombNumerical.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            TimeBombNumerical.ForeColor = SystemColors.ButtonHighlight;
+            TimeBombNumerical.Location = new Point(816, 65);
+            TimeBombNumerical.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            TimeBombNumerical.Name = "TimeBombNumerical";
+            TimeBombNumerical.Size = new Size(148, 23);
+            TimeBombNumerical.TabIndex = 213;
+            TimeBombNumerical.TextAlign = HorizontalAlignment.Center;
+            // 
+            // SetBombTimer
+            // 
+            SetBombTimer.BackColor = Color.Transparent;
+            SetBombTimer.BackgroundImage = (Image)resources.GetObject("SetBombTimer.BackgroundImage");
+            SetBombTimer.BackgroundImageLayout = ImageLayout.Stretch;
+            SetBombTimer.Cursor = Cursors.Hand;
+            SetBombTimer.Font = new Font("Consolas", 10.2F, FontStyle.Bold);
+            SetBombTimer.ForeColor = SystemColors.ActiveCaptionText;
+            SetBombTimer.Location = new Point(815, 87);
+            SetBombTimer.Name = "SetBombTimer";
+            SetBombTimer.Size = new Size(150, 28);
+            SetBombTimer.TabIndex = 211;
+            SetBombTimer.Text = "Set Bomb Timer";
+            SetBombTimer.UseVisualStyleBackColor = false;
+            SetBombTimer.Click += SetBombTimer_Click;
+            // 
+            // pictureBox31
+            // 
+            pictureBox31.BackgroundImage = (Image)resources.GetObject("pictureBox31.BackgroundImage");
+            pictureBox31.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox31.Location = new Point(816, 3);
+            pictureBox31.Name = "pictureBox31";
+            pictureBox31.Size = new Size(148, 90);
+            pictureBox31.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox31.TabIndex = 210;
+            pictureBox31.TabStop = false;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1333, 941);
-            Controls.Add(button3);
-            Controls.Add(button4);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(1166, 706);
+            Controls.Add(TimeBombNumerical);
+            Controls.Add(SetBombTimer);
+            Controls.Add(pictureBox31);
+            Controls.Add(ChangePalKeyToColdTemp);
+            Controls.Add(Minus1ToKeycardLevel);
+            Controls.Add(Add1ToKeycardLevel);
+            Controls.Add(ChangePalKeyToNormalTemp);
+            Controls.Add(ChangePalKeyToHotTemp);
+            Controls.Add(DisableRope);
+            Controls.Add(EnableRope);
+            Controls.Add(DisableKetchup);
+            Controls.Add(EnableKetchup);
+            Controls.Add(DisableHandkerchief);
+            Controls.Add(EnableHandkerchief);
+            Controls.Add(DisableCigs);
+            Controls.Add(EnableCigs);
+            Controls.Add(pictureBox30);
+            Controls.Add(DisableScope);
+            Controls.Add(EnableScope);
+            Controls.Add(DisableThermal);
+            Controls.Add(EnableThermal);
+            Controls.Add(DisableNvg);
+            Controls.Add(EnableNvg);
+            Controls.Add(DisableGasmask);
+            Controls.Add(EnableGasmask);
+            Controls.Add(DisableMineD);
+            Controls.Add(EnableMineD);
+            Controls.Add(DisableBodyArmor);
+            Controls.Add(EnableBodyArmor);
+            Controls.Add(pictureBox29);
+            Controls.Add(DisableBoxC);
+            Controls.Add(EnableBoxC);
+            Controls.Add(DisableBoxB);
+            Controls.Add(EnableBoxB);
+            Controls.Add(DisableBoxA);
+            Controls.Add(EnableBoxA);
+            Controls.Add(DisableBandana);
+            Controls.Add(EnableBandana);
+            Controls.Add(DisableStealthCamo);
+            Controls.Add(EnableStealthCamo);
             Controls.Add(DiazapamMaxCountNumericBox);
             Controls.Add(DiazapamCountNumericBox);
             Controls.Add(label12);
@@ -1346,11 +1915,11 @@
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox16);
             Controls.Add(pictureBox17);
-            Controls.Add(button18);
+            Controls.Add(SetDiazapamCount);
             Controls.Add(pictureBox18);
-            Controls.Add(button19);
+            Controls.Add(SetMedicineCount);
             Controls.Add(pictureBox19);
-            Controls.Add(button20);
+            Controls.Add(SetRationcount);
             Controls.Add(pictureBox20);
             Controls.Add(SetAmmoPSG1);
             Controls.Add(pictureBox6);
@@ -1374,7 +1943,6 @@
             Controls.Add(SetAmmoSocom);
             Controls.Add(pictureBox4);
             DoubleBuffered = true;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "MainForm";
             Text = "MGS1 MC Cheat Trainer - ANTIBigBoss - Version 1.0";
             Load += MainForm_Load;
@@ -1432,6 +2000,10 @@
             ((System.ComponentModel.ISupportInitialize)MedicineCountNumericBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)DiazapamMaxCountNumericBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)DiazapamCountNumericBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TimeBombNumerical).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1460,11 +2032,11 @@
         private PictureBox pictureBox10;
         private PictureBox pictureBox16;
         private PictureBox pictureBox17;
-        private Button button18;
+        private Button SetDiazapamCount;
         private PictureBox pictureBox18;
-        private Button button19;
+        private Button SetMedicineCount;
         private PictureBox pictureBox19;
-        private Button button20;
+        private Button SetRationcount;
         private PictureBox pictureBox20;
         private PictureBox pictureBox11;
         private PictureBox pictureBox12;
@@ -1517,9 +2089,45 @@
         private NumericUpDown DiazapamMaxCountNumericBox;
         private NumericUpDown DiazapamCountNumericBox;
         private Label label12;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button EnableStealthCamo;
+        private Button DisableStealthCamo;
+        private Button DisableBandana;
+        private Button EnableBandana;
+        private Button DisableBoxA;
+        private Button EnableBoxA;
+        private Button DisableBoxB;
+        private Button EnableBoxB;
+        private Button DisableBoxC;
+        private Button EnableBoxC;
+        private PictureBox pictureBox29;
+        private Button DisableBodyArmor;
+        private Button EnableBodyArmor;
+        private Button DisableMineD;
+        private Button EnableMineD;
+        private Button DisableGasmask;
+        private Button EnableGasmask;
+        private Button DisableNvg;
+        private Button EnableNvg;
+        private Button DisableThermal;
+        private Button EnableThermal;
+        private Button DisableScope;
+        private Button EnableScope;
+        private PictureBox pictureBox30;
+        private Button DisableCigs;
+        private Button EnableCigs;
+        private Button DisableHandkerchief;
+        private Button EnableHandkerchief;
+        private Button DisableKetchup;
+        private Button EnableKetchup;
+        private Button DisableRope;
+        private Button EnableRope;
+        private Button ChangePalKeyToNormalTemp;
+        private Button ChangePalKeyToHotTemp;
+        private Button Minus1ToKeycardLevel;
+        private Button Add1ToKeycardLevel;
+        private Button ChangePalKeyToColdTemp;
+        private NumericUpDown TimeBombNumerical;
+        private Button SetBombTimer;
+        private PictureBox pictureBox31;
     }
 }

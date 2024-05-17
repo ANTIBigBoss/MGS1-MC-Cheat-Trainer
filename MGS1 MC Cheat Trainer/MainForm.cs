@@ -20,7 +20,7 @@ namespace MGS1_MC_Cheat_Trainer
             if (aobFound)
             {
                 LoggingManager.Instance.Log("Successfully hooked to the game process!");
-                
+
             }
         }
 
@@ -311,6 +311,201 @@ namespace MGS1_MC_Cheat_Trainer
             {
                 LoggingManager.Instance.Log($"Error: {ex.Message}");
             }
+        }
+
+        private void EnableBandana_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableBandana_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableStealthCamo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableStealthCamo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetRationcount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetMedicineCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetDiazapamCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableBoxA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableBoxA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableBoxB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableBoxB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableBoxC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableBoxC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableBodyArmor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableBodyArmor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableMineD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableMineD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableGasmask_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableGasmask_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableNvg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableNvg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableThermal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableThermal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableScope_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableScope_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableCigs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableCigs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableKetchup_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableKetchup_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableRope_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableRope_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableHandkerchief_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableHandkerchief_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangePalKeyToNormalTemp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangePalKeyToColdTemp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangePalKeyToHotTemp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add1ToKeycardLevel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Minus1ToKeycardLevel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetBombTimer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
