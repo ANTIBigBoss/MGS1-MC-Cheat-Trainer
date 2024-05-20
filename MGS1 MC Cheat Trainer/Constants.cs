@@ -32,7 +32,7 @@ namespace MGS1_MC_Cheat_Trainer
         }
 
         public enum WeaponAmmo
-        {
+        { 
           SocomAmmo = 1026,
           FamasAmmo = 1024,
           GrenadeAmmo = 1022,
@@ -58,44 +58,45 @@ namespace MGS1_MC_Cheat_Trainer
 
         public enum Items
         {
-            Cigs = 984,
-            Scope = 982,
-            CBoxA = 980,
-            CBoxB = 978,
-            CBoxC = 976,
-            NightVisionGoggles = 974,
-            ThermalGoggles = 972,
-            GasMask = 970,
-            BodyArmor = 968,
-            Ketchup = 966,
-            StealthCamo = 964,
-            Bandana = 962,
-            Camera = 960,
-            Rations = 958,
-            ColdMedicine = 956,
-            Diazepam = 954,
-            PalKey = 952,
-            CardKey = 950,
-            TimeBomb = 948,
-            MineDetector = 946,
-            MoDisc = 944,
-            Rope = 942,
-            Handkerchief = 940,
-            SocomSuppressor = 938,
+            Cigs = 986,
+            Scope = 984,
+            CBoxA = 982,
+            CBoxB = 980,
+            CBoxC = 978,
+            NightVisionGoggles = 976, 
+            ThermalGoggles = 974,
+            GasMask = 972,
+            BodyArmor = 970,
+            Ketchup = 968,
+            StealthCamo = 966,
+            Bandana = 964,
+            Camera = 962,
+            Rations = 960,
+            ColdMedicine = 958, 
+            Diazepam = 956,
+            PalKey = 954,
+            PalKeyTemp = 930,
+            CardKey = 952,
+            TimeBomb = 950,
+            MineDetector = 948,
+            MoDisc = 946,
+            Rope = 944,
+            Handkerchief = 942,
+            SocomSuppressor = 940,
             // Max amounts
-            RationMax = 936,
-            MedicineMax = 934,
-            DiazepamMax = 932,
+            RationMax = 938,
+            MedicineMax = 936,
+            DiazepamMax = 934,
         }
 
         public enum GameStats
         {
-            AlertsTriggered = 930,
-            EnemiesKilled = 928,
-            RationsUsed = 926,
-            ContinuesUsed = 924,
-            PlayTime = 922,
-            TimesSaved = 920,
+            AlertsTriggered = 904,
+            EnemiesKilled = 902,
+            RationsUsed = 888,
+            ContinuesUsed = 886,
+            PlayTime = 880,
+            TimesSaved = 862,
         }
 
     }

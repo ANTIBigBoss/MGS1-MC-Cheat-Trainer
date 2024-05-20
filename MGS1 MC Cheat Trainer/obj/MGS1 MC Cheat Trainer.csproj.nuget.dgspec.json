@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lauzonmi\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {}
+    "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lauzonmi\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {
+    "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lauzonmi\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
+        "projectUniqueName": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
         "projectName": "MGS1 MC Cheat Trainer",
-        "projectPath": "C:\\Users\\lauzonmi\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
-        "packagesPath": "C:\\Users\\lauzonmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lauzonmi\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\obj\\",
+        "projectPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
+        "packagesPath": "C:\\Users\\Mitch\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lauzonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mitch\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

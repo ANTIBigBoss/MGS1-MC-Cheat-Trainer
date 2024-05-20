@@ -315,197 +315,965 @@ namespace MGS1_MC_Cheat_Trainer
 
         private void EnableBandana_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBandanaStatus();
+                LoggingManager.Instance.Log(
+                    $"Bandana status before editing: {AobManager.Instance.ReadBandanaStatus()}");
+
+                AobManager.Instance.EnableBandana();
+
+                string CurrentBandanaStatus = AobManager.Instance.ReadBandanaStatus();
+                LoggingManager.Instance.Log($"Bandana status after editing: {CurrentBandanaStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableBandana_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBandanaStatus();
+                LoggingManager.Instance.Log(
+                    $"Bandana status before editing: {AobManager.Instance.ReadBandanaStatus()}");
+
+                AobManager.Instance.DisableBandana();
+
+                string CurrentBandanaStatus = AobManager.Instance.ReadBandanaStatus();
+                LoggingManager.Instance.Log($"Bandana status after editing: {CurrentBandanaStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableStealthCamo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadStealthStatus();
+                LoggingManager.Instance.Log(
+                    $"Stealth Camo status before editing: {AobManager.Instance.ReadStealthStatus()}");
+
+                AobManager.Instance.EnableStealth();
+
+                string CurrentStealthStatus = AobManager.Instance.ReadStealthStatus();
+                LoggingManager.Instance.Log($"Stealth Camo status after editing: {CurrentStealthStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableStealthCamo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadStealthStatus();
+                LoggingManager.Instance.Log(
+                    $"Stealth Camo status before editing: {AobManager.Instance.ReadStealthStatus()}");
+
+                AobManager.Instance.DisableStealth();
+
+                string CurrentStealthStatus = AobManager.Instance.ReadStealthStatus();
+                LoggingManager.Instance.Log($"Stealth Camo status after editing: {CurrentStealthStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void SetRationcount_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadRationCount();
+                LoggingManager.Instance.Log($"Ration Count before editing: {AobManager.Instance.ReadRationCount()}");
 
+                AobManager.Instance.ReadMaxRationCount();
+                LoggingManager.Instance.Log(
+                    $"Max Ration Count before editing: {AobManager.Instance.ReadMaxRationCount()}");
+
+                short RationCount = Convert.ToInt16(RationCountNumericBox.Text);
+                short MaxRationCount = Convert.ToInt16(RationMaxCountNumericBox.Text);
+
+                AobManager.Instance.WriteRationCount(RationCount);
+                AobManager.Instance.WriteMaxRationCount(MaxRationCount);
+
+                string CurrentRationCount = AobManager.Instance.ReadRationCount();
+                LoggingManager.Instance.Log($"Ration Count after editing: {CurrentRationCount}");
+
+                String CurrentMaxRationCount = AobManager.Instance.ReadMaxRationCount();
+                LoggingManager.Instance.Log($"Max Ration Count after editing: {CurrentMaxRationCount}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
         }
 
         private void SetMedicineCount_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadMedicineCount();
+                LoggingManager.Instance.Log(
+                    $"Medicine Count before editing: {AobManager.Instance.ReadMedicineCount()}");
+
+                AobManager.Instance.ReadMaxMedicineCount();
+                LoggingManager.Instance.Log(
+                    $"Max Medicine Count before editing: {AobManager.Instance.ReadMaxMedicineCount()}");
+
+                short MedicineCount = Convert.ToInt16(MedicineCountNumericBox.Text);
+                short MaxMedicineCount = Convert.ToInt16(MedicineMaxCountNumericBox.Text);
+
+                AobManager.Instance.WriteMedicineCount(MedicineCount);
+                AobManager.Instance.WriteMaxMedicineCount(MaxMedicineCount);
+
+                string CurrentMedicineCount = AobManager.Instance.ReadMedicineCount();
+                LoggingManager.Instance.Log($"Medicine Count after editing: {CurrentMedicineCount}");
+
+                String CurrentMaxMedicineCount = AobManager.Instance.ReadMaxMedicineCount();
+                LoggingManager.Instance.Log($"Max Medicine Count after editing: {CurrentMaxMedicineCount}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void SetDiazapamCount_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadDiazapamCount();
+                LoggingManager.Instance.Log(
+                    $"Diazapam Count before editing: {AobManager.Instance.ReadDiazapamCount()}");
+
+                AobManager.Instance.ReadMaxDiazapamCount();
+                LoggingManager.Instance.Log(
+                    $"Max Diazapam Count before editing: {AobManager.Instance.ReadMaxDiazapamCount()}");
+
+                short DiazapamCount = Convert.ToInt16(DiazapamCountNumericBox.Text);
+                short MaxDiazapamCount = Convert.ToInt16(DiazapamMaxCountNumericBox.Text);
+
+                AobManager.Instance.WriteDiazapamCount(DiazapamCount);
+                AobManager.Instance.WriteMaxDiazapamCount(MaxDiazapamCount);
+
+                string CurrentDiazapamCount = AobManager.Instance.ReadDiazapamCount();
+                LoggingManager.Instance.Log($"Diazapam Count after editing: {CurrentDiazapamCount}");
+
+                String CurrentMaxDiazapamCount = AobManager.Instance.ReadMaxDiazapamCount();
+                LoggingManager.Instance.Log($"Max Diazapam Count after editing: {CurrentMaxDiazapamCount}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableBoxA_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBoxAStatus();
+                LoggingManager.Instance.Log(
+                    $"Box A status before editing: {AobManager.Instance.ReadBoxAStatus()}");
+
+                AobManager.Instance.EnableBoxA();
+
+                string CurrentBoxAStatus = AobManager.Instance.ReadBoxAStatus();
+                LoggingManager.Instance.Log($"Box A status after editing: {CurrentBoxAStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableBoxA_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBoxAStatus();
+                LoggingManager.Instance.Log(
+                    $"Box A status before editing: {AobManager.Instance.ReadBoxAStatus()}");
+
+                AobManager.Instance.DisableBoxA();
+
+                string CurrentBoxAStatus = AobManager.Instance.ReadBoxAStatus();
+                LoggingManager.Instance.Log($"Box A status after editing: {CurrentBoxAStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableBoxB_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBoxBStatus();
+                LoggingManager.Instance.Log(
+                    $"Box B status before editing: {AobManager.Instance.ReadBoxBStatus()}");
+
+                AobManager.Instance.EnableBoxB();
+
+                string CurrentBoxBStatus = AobManager.Instance.ReadBoxBStatus();
+                LoggingManager.Instance.Log($"Box B status after editing: {CurrentBoxBStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableBoxB_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBoxBStatus();
+                LoggingManager.Instance.Log(
+                    $"Box B status before editing: {AobManager.Instance.ReadBoxBStatus()}");
+
+                AobManager.Instance.DisableBoxB();
+
+                string CurrentBoxBStatus = AobManager.Instance.ReadBoxBStatus();
+                LoggingManager.Instance.Log($"Box B status after editing: {CurrentBoxBStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableBoxC_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBoxCStatus();
+                LoggingManager.Instance.Log(
+                    $"Box C status before editing: {AobManager.Instance.ReadBoxCStatus()}");
+
+                AobManager.Instance.EnableBoxC();
+
+                string CurrentBoxCStatus = AobManager.Instance.ReadBoxCStatus();
+                LoggingManager.Instance.Log($"Box C status after editing: {CurrentBoxCStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableBoxC_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBoxCStatus();
+                LoggingManager.Instance.Log(
+                    $"Box C status before editing: {AobManager.Instance.ReadBoxCStatus()}");
+
+                AobManager.Instance.DisableBoxC();
+
+                string CurrentBoxCStatus = AobManager.Instance.ReadBoxCStatus();
+                LoggingManager.Instance.Log($"Box C status after editing: {CurrentBoxCStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableBodyArmor_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBodyArmorStatus();
+                LoggingManager.Instance.Log(
+                    $"Body Armor status before editing: {AobManager.Instance.ReadBodyArmorStatus()}");
+
+                AobManager.Instance.EnableBodyArmor();
+
+                string CurrentBodyArmorStatus = AobManager.Instance.ReadBodyArmorStatus();
+                LoggingManager.Instance.Log($"Body Armor status after editing: {CurrentBodyArmorStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableBodyArmor_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadBodyArmorStatus();
+                LoggingManager.Instance.Log(
+                    $"Body Armor status before editing: {AobManager.Instance.ReadBodyArmorStatus()}");
+
+                AobManager.Instance.DisableBodyArmor();
+
+                string CurrentBodyArmorStatus = AobManager.Instance.ReadBodyArmorStatus();
+                LoggingManager.Instance.Log($"Body Armor status after editing: {CurrentBodyArmorStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableMineD_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadMineDetectorStatus();
+                LoggingManager.Instance.Log(
+                    $"Mine D status before editing: {AobManager.Instance.ReadMineDetectorStatus()}");
+
+                AobManager.Instance.EnableMineDetector();
+
+                string CurrentMineDStatus = AobManager.Instance.ReadMineDetectorStatus();
+                LoggingManager.Instance.Log($"Mine D status after editing: {CurrentMineDStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableMineD_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadMineDetectorStatus();
+                LoggingManager.Instance.Log(
+                    $"Mine D status before editing: {AobManager.Instance.ReadMineDetectorStatus()}");
+
+                AobManager.Instance.DisableMineDetector();
+
+                string CurrentMineDStatus = AobManager.Instance.ReadMineDetectorStatus();
+                LoggingManager.Instance.Log($"Mine D status after editing: {CurrentMineDStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableGasmask_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadGasMaskStatus();
+                LoggingManager.Instance.Log(
+                    $"Gas Mask status before editing: {AobManager.Instance.ReadGasMaskStatus()}");
+
+                AobManager.Instance.EnableGasMask();
+
+                string CurrentGasMaskStatus = AobManager.Instance.ReadGasMaskStatus();
+                LoggingManager.Instance.Log($"Gas Mask status after editing: {CurrentGasMaskStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableGasmask_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadGasMaskStatus();
+                LoggingManager.Instance.Log(
+                    $"Gas Mask status before editing: {AobManager.Instance.ReadGasMaskStatus()}");
+
+                AobManager.Instance.DisableGasMask();
+
+                string CurrentGasMaskStatus = AobManager.Instance.ReadGasMaskStatus();
+                LoggingManager.Instance.Log($"Gas Mask status after editing: {CurrentGasMaskStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableNvg_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadNightVisionStatus();
+                LoggingManager.Instance.Log(
+                    $"NVG status before editing: {AobManager.Instance.ReadNightVisionStatus()}");
+
+                AobManager.Instance.EnableNightVision();
+
+                string CurrentNvgStatus = AobManager.Instance.ReadNightVisionStatus();
+                LoggingManager.Instance.Log($"NVG status after editing: {CurrentNvgStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableNvg_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadNightVisionStatus();
+                LoggingManager.Instance.Log(
+                    $"NVG status before editing: {AobManager.Instance.ReadNightVisionStatus()}");
+
+                AobManager.Instance.DisableNightVision();
+
+                string CurrentNvgStatus = AobManager.Instance.ReadNightVisionStatus();
+                LoggingManager.Instance.Log($"NVG status after editing: {CurrentNvgStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableThermal_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadThermalGogglesStatus();
+                LoggingManager.Instance.Log(
+                    $"Thermal status before editing: {AobManager.Instance.ReadThermalGogglesStatus()}");
+
+                AobManager.Instance.EnableThermalGoggles();
+
+                string CurrentThermalStatus = AobManager.Instance.ReadThermalGogglesStatus();
+                LoggingManager.Instance.Log($"Thermal status after editing: {CurrentThermalStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableThermal_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadThermalGogglesStatus();
+                LoggingManager.Instance.Log(
+                    $"Thermal status before editing: {AobManager.Instance.ReadThermalGogglesStatus()}");
+
+                AobManager.Instance.DisableThermalGoggles();
+
+                string CurrentThermalStatus = AobManager.Instance.ReadThermalGogglesStatus();
+                LoggingManager.Instance.Log($"Thermal status after editing: {CurrentThermalStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableScope_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadScopeStatus();
+                LoggingManager.Instance.Log(
+                    $"Scope status before editing: {AobManager.Instance.ReadScopeStatus()}");
+
+                AobManager.Instance.EnableScope();
+
+                string CurrentScopeStatus = AobManager.Instance.ReadScopeStatus();
+                LoggingManager.Instance.Log($"Scope status after editing: {CurrentScopeStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableScope_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadScopeStatus();
+                LoggingManager.Instance.Log(
+                    $"Scope status before editing: {AobManager.Instance.ReadScopeStatus()}");
+
+                AobManager.Instance.DisableScope();
+
+                string CurrentScopeStatus = AobManager.Instance.ReadScopeStatus();
+                LoggingManager.Instance.Log($"Scope status after editing: {CurrentScopeStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableCigs_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadCigarettesStatus();
+                LoggingManager.Instance.Log(
+                    $"Cigs status before editing: {AobManager.Instance.ReadCigarettesStatus()}");
+
+                AobManager.Instance.EnableCigarettes();
+
+                string CurrentCigsStatus = AobManager.Instance.ReadCigarettesStatus();
+                LoggingManager.Instance.Log($"Cigs status after editing: {CurrentCigsStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableCigs_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadCigarettesStatus();
+                LoggingManager.Instance.Log(
+                    $"Cigs status before editing: {AobManager.Instance.ReadCigarettesStatus()}");
+
+                AobManager.Instance.DisableCigarettes();
+
+                string CurrentCigsStatus = AobManager.Instance.ReadCigarettesStatus();
+                LoggingManager.Instance.Log($"Cigs status after editing: {CurrentCigsStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableKetchup_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadKetchupStatus();
+                LoggingManager.Instance.Log(
+                    $"Ketchup status before editing: {AobManager.Instance.ReadKetchupStatus()}");
+
+                AobManager.Instance.EnableKetchup();
+
+                string CurrentKetchupStatus = AobManager.Instance.ReadKetchupStatus();
+                LoggingManager.Instance.Log($"Ketchup status after editing: {CurrentKetchupStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableKetchup_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadKetchupStatus();
+                LoggingManager.Instance.Log(
+                    $"Ketchup status before editing: {AobManager.Instance.ReadKetchupStatus()}");
+
+                AobManager.Instance.DisableKetchup();
+
+                string CurrentKetchupStatus = AobManager.Instance.ReadKetchupStatus();
+                LoggingManager.Instance.Log($"Ketchup status after editing: {CurrentKetchupStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableRope_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadRopeStatus();
+                LoggingManager.Instance.Log(
+                    $"Rope status before editing: {AobManager.Instance.ReadRopeStatus()}");
+
+                AobManager.Instance.EnableRope();
+
+                string CurrentRopeStatus = AobManager.Instance.ReadRopeStatus();
+                LoggingManager.Instance.Log($"Rope status after editing: {CurrentRopeStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableRope_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadRopeStatus();
+                LoggingManager.Instance.Log(
+                    $"Rope status before editing: {AobManager.Instance.ReadRopeStatus()}");
+
+                AobManager.Instance.DisableRope();
+
+                string CurrentRopeStatus = AobManager.Instance.ReadRopeStatus();
+                LoggingManager.Instance.Log($"Rope status after editing: {CurrentRopeStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void EnableHandkerchief_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadHandkerchiefStatus();
+                LoggingManager.Instance.Log(
+                    $"Handkerchief status before editing: {AobManager.Instance.ReadHandkerchiefStatus()}");
+
+                AobManager.Instance.EnableHandkerchief();
+
+                string CurrentHandkerchiefStatus = AobManager.Instance.ReadHandkerchiefStatus();
+                LoggingManager.Instance.Log($"Handkerchief status after editing: {CurrentHandkerchiefStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void DisableHandkerchief_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadHandkerchiefStatus();
+                LoggingManager.Instance.Log(
+                    $"Handkerchief status before editing: {AobManager.Instance.ReadHandkerchiefStatus()}");
+
+                AobManager.Instance.DisableHandkerchief();
+
+                string CurrentHandkerchiefStatus = AobManager.Instance.ReadHandkerchiefStatus();
+                LoggingManager.Instance.Log($"Handkerchief status after editing: {CurrentHandkerchiefStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void ChangePalKeyToNormalTemp_Click(object sender, EventArgs e)
         {
+            // Same as a normal enable I presume temp changes might be elsewhere in the
+            // code or a byte combo I'm unaware of or haven't tested I would assume
+            // if 0100 is normal then 0200 and 0300 are hot and cold but needs testing
+            try
+            {
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
+
+                AobManager.Instance.EnablePalKey();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void DisablePalKey_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
+
+                AobManager.Instance.ReadPalKeyTempStatus();
+                LoggingManager.Instance.Log(
+                                       $"Pal Key Temp status before editing: {AobManager.Instance.ReadPalKeyTempStatus()}");
+                    AobManager.Instance.DisablePalKey();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+
+                string CurrentPalKeyTempStatus = AobManager.Instance.ReadPalKeyTempStatus();
+                LoggingManager.Instance.Log($"Pal Key Temp status after editing: {CurrentPalKeyTempStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void ChangePalKeyToColdTemp_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
+
+                AobManager.Instance.SetPalKeyToCold();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
         }
 
         private void ChangePalKeyToHotTemp_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
+
+                AobManager.Instance.SetPalKeyToHot();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+        }
+
+        private void EnableKeycard_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log(
+                    $"Keycard status before editing: {AobManager.Instance.ReadKeycardStatus()}");
+
+                AobManager.Instance.EnableKeycard();
+
+                string CurrentKeycardStatus = AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log($"Keycard status after editing: {CurrentKeycardStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
-        private void Add1ToKeycardLevel_Click(object sender, EventArgs e)
+        private void DisableKeycard_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log(
+                    $"Keycard status before editing: {AobManager.Instance.ReadKeycardStatus()}");
+
+                AobManager.Instance.DisableKeycard();
+
+                string CurrentKeycardStatus = AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log($"Keycard status after editing: {CurrentKeycardStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
-        private void Minus1ToKeycardLevel_Click(object sender, EventArgs e)
+        private void IncrementKeycardLevelByOne_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log(
+                    $"Keycard status before editing: {AobManager.Instance.ReadKeycardStatus()}");
+
+                AobManager.Instance.IncrementKeycard();
+
+                string CurrentKeycardStatus = AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log($"Keycard status after editing: {CurrentKeycardStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void DecrementKeycardLevelByOne_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log(
+                    $"Keycard status before editing: {AobManager.Instance.ReadKeycardStatus()}");
+
+                AobManager.Instance.DecrementKeycard();
+
+                string CurrentKeycardStatus = AobManager.Instance.ReadKeycardStatus();
+                LoggingManager.Instance.Log($"Keycard status after editing: {CurrentKeycardStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
 
         private void SetBombTimer_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AobManager.Instance.ReadTimeBombStatus();
+                LoggingManager.Instance.Log(
+                    $"Time Bomb status before editing: {AobManager.Instance.ReadTimeBombStatus()}");
+
+                short TimeBombValue = Convert.ToInt16(TimeBombNumerical.Text);
+
+                AobManager.Instance.SetTimeBomb(TimeBombValue);
+
+                string CurrentTimeBombStatus = AobManager.Instance.ReadTimeBombStatus();
+                LoggingManager.Instance.Log($"Time Bomb status after editing: {CurrentTimeBombStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
 
         }
+
+        private void EnableMoDisc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadMoDiscStatus();
+                LoggingManager.Instance.Log(
+                    $"Mo Disc status before editing: {AobManager.Instance.ReadMoDiscStatus()}");
+
+                AobManager.Instance.EnableMoDisc();
+
+                string CurrentMoDiscStatus = AobManager.Instance.ReadMoDiscStatus();
+                LoggingManager.Instance.Log($"Mo Disc status after editing: {CurrentMoDiscStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void DisableMoDisc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadMoDiscStatus();
+                LoggingManager.Instance.Log(
+                    $"Mo Disc status before editing: {AobManager.Instance.ReadMoDiscStatus()}");
+
+                AobManager.Instance.DisableMoDisc();
+
+                string CurrentMoDiscStatus = AobManager.Instance.ReadMoDiscStatus();
+                LoggingManager.Instance.Log($"Mo Disc status after editing: {CurrentMoDiscStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void EnableCamera_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadCameraStatus();
+                LoggingManager.Instance.Log(
+                    $"Camera status before editing: {AobManager.Instance.ReadCameraStatus()}");
+
+                AobManager.Instance.EnableCamera();
+
+                string CurrentCameraStatus = AobManager.Instance.ReadCameraStatus();
+                LoggingManager.Instance.Log($"Camera status after editing: {CurrentCameraStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void DisableCamera_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadCameraStatus();
+                LoggingManager.Instance.Log(
+                    $"Camera status before editing: {AobManager.Instance.ReadCameraStatus()}");
+
+                AobManager.Instance.DisableCamera();
+
+                string CurrentCameraStatus = AobManager.Instance.ReadCameraStatus();
+                LoggingManager.Instance.Log($"Camera status after editing: {CurrentCameraStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        
     }
 }
