@@ -1,0 +1,5 @@
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Release\net8.0-windows\app.publish\MGS1 MC Cheat Trainer.exe
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Release\net8.0-windows\app.publish\MGS1 MC Cheat Trainer.dll
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Release\net8.0-windows\app.publish\MGS1 MC Cheat Trainer.deps.json
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Release\net8.0-windows\app.publish\MGS1 MC Cheat Trainer.runtimeconfig.json
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Release\net8.0-windows\app.publish\MGS1 MC Cheat Trainer.pdb

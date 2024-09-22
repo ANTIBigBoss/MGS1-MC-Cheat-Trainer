@@ -76,6 +76,7 @@ namespace MGS1_MC_Cheat_Trainer
             Diazepam = 956,
             PalKey = 954,
             PalKeyTemp = 930,
+            PalKeyTempStatus = 928,
             CardKey = 952,
             TimeBomb = 950,
             MineDetector = 948,

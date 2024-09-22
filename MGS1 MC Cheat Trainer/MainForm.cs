@@ -1004,93 +1004,7 @@ namespace MGS1_MC_Cheat_Trainer
 
         }
 
-        private void ChangePalKeyToNormalTemp_Click(object sender, EventArgs e)
-        {
-            // Same as a normal enable I presume temp changes might be elsewhere in the
-            // code or a byte combo I'm unaware of or haven't tested I would assume
-            // if 0100 is normal then 0200 and 0300 are hot and cold but needs testing
-            try
-            {
-                AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log(
-                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
 
-                AobManager.Instance.EnablePalKey();
-
-                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
-            }
-            catch (Exception ex)
-            {
-                LoggingManager.Instance.Log($"Error: {ex.Message}");
-            }
-
-        }
-
-        private void DisablePalKey_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log(
-                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
-
-                AobManager.Instance.ReadPalKeyTempStatus();
-                LoggingManager.Instance.Log(
-                                       $"Pal Key Temp status before editing: {AobManager.Instance.ReadPalKeyTempStatus()}");
-                    AobManager.Instance.DisablePalKey();
-
-                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
-
-                string CurrentPalKeyTempStatus = AobManager.Instance.ReadPalKeyTempStatus();
-                LoggingManager.Instance.Log($"Pal Key Temp status after editing: {CurrentPalKeyTempStatus}");
-            }
-            catch (Exception ex)
-            {
-                LoggingManager.Instance.Log($"Error: {ex.Message}");
-            }
-
-        }
-
-        private void ChangePalKeyToColdTemp_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log(
-                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
-
-                AobManager.Instance.SetPalKeyToCold();
-
-                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
-            }
-            catch (Exception ex)
-            {
-                LoggingManager.Instance.Log($"Error: {ex.Message}");
-            }
-        }
-
-        private void ChangePalKeyToHotTemp_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log(
-                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
-
-                AobManager.Instance.SetPalKeyToHot();
-
-                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
-                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
-            }
-            catch (Exception ex)
-            {
-                LoggingManager.Instance.Log($"Error: {ex.Message}");
-            }
-        }
 
         private void EnableKeycard_Click(object sender, EventArgs e)
         {
@@ -1274,6 +1188,105 @@ namespace MGS1_MC_Cheat_Trainer
 
         }
 
-        
+        private void ChangePalKeyToNormalTemp_Click(object sender, EventArgs e)
+        {
+            // Same as a normal enable I presume temp changes might be elsewhere in the
+            // code or a byte combo I'm unaware of or haven't tested I would assume
+            // if 0100 is normal then 0200 and 0300 are hot and cold but needs testing
+            try
+            {
+                palKeyNormalPicturebox.Visible = true;
+                palKeyColdPictureBox.Visible = false;
+                palKeyHotPictureBox.Visible = false;
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
+
+                AobManager.Instance.EnablePalKey();
+                AobManager.Instance.SetPalKeyToNormal();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void DisablePalKey_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                palKeyNormalPicturebox.Visible = true;
+                palKeyColdPictureBox.Visible = false;
+                palKeyHotPictureBox.Visible = false;
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
+
+                AobManager.Instance.ReadPalKeyTempStatus();
+                LoggingManager.Instance.Log(
+                                       $"Pal Key Temp status before editing: {AobManager.Instance.ReadPalKeyTempStatus()}");
+                AobManager.Instance.DisablePalKey();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+
+                string CurrentPalKeyTempStatus = AobManager.Instance.ReadPalKeyTempStatus();
+                LoggingManager.Instance.Log($"Pal Key Temp status after editing: {CurrentPalKeyTempStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void ChangePalKeyToColdTemp_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                palKeyNormalPicturebox.Visible = false;
+                palKeyColdPictureBox.Visible = true;
+                palKeyHotPictureBox.Visible = false;
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()}");
+
+                AobManager.Instance.SetPalKeyToCold();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+        }
+
+        private void ChangePalKeyToHotTemp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                palKeyNormalPicturebox.Visible = false;
+                palKeyColdPictureBox.Visible = false;
+                palKeyHotPictureBox.Visible = true;
+                AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log(
+                    $"Pal Key status before editing: {AobManager.Instance.ReadPalKeyStatus()} \nTemp Range: {AobManager.Instance.ReadPalKeyTempRange()}");
+
+                AobManager.Instance.SetPalKeyToHot();
+
+                string CurrentPalKeyStatus = AobManager.Instance.ReadPalKeyStatus();
+                LoggingManager.Instance.Log($"Pal Key status after editing: {CurrentPalKeyStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+        }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {}
+    "C:\\Users\\Mitch\\OneDrive\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {
+    "C:\\Users\\Mitch\\OneDrive\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
+        "projectUniqueName": "C:\\Users\\Mitch\\OneDrive\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
         "projectName": "MGS1 MC Cheat Trainer",
-        "projectPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
+        "projectPath": "C:\\Users\\Mitch\\OneDrive\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\MGS1 MC Cheat Trainer.csproj",
         "packagesPath": "C:\\Users\\Mitch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mitch\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\obj\\",
+        "outputPath": "C:\\Users\\Mitch\\OneDrive\\Documents\\GitHub\\MGS1-MC-Cheat-Trainer\\MGS1 MC Cheat Trainer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

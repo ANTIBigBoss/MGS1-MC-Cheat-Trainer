@@ -51,3 +51,21 @@ C:\Users\lauzonmi\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\o
 C:\Users\lauzonmi\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.pdb
 C:\Users\lauzonmi\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.genruntimeconfig.cache
 C:\Users\lauzonmi\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\ref\MGS1 MC Cheat Trainer.dll
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.exe
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.deps.json
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.runtimeconfig.json
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.dll
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\bin\Debug\net8.0-windows\MGS1 MC Cheat Trainer.pdb
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1_MC_Cheat_Trainer.MainForm.resources
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1_MC_Cheat_Trainer.Properties.Resources.resources
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.csproj.GenerateResource.cache
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.AssemblyInfoInputs.cache
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.AssemblyInfo.cs
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.csproj.CoreCompileInputs.cache
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.sourcelink.json
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.dll
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\refint\MGS1 MC Cheat Trainer.dll
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.pdb
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\MGS1 MC Cheat Trainer.genruntimeconfig.cache
+C:\Users\Mitch\OneDrive\Documents\GitHub\MGS1-MC-Cheat-Trainer\MGS1 MC Cheat Trainer\obj\Debug\net8.0-windows\ref\MGS1 MC Cheat Trainer.dll

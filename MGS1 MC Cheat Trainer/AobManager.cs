@@ -1396,7 +1396,20 @@ namespace MGS1_MC_Cheat_Trainer
             }
 
             IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
-            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKeyTemp);
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKeyTemp);           
+            return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        // This can go from -9000 to 9000 we will need to change the temp range and status at the same time
+        public string ReadPalKeyTempRange() 
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                return "Failed to find Pal Key Temp range address.";
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKeyTempStatus);
             return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
         }
 
@@ -1416,8 +1429,12 @@ namespace MGS1_MC_Cheat_Trainer
             IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
             IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKey);
             IntPtr targetAddressTemp = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKeyTemp);
+            IntPtr targetAddressTempRange = IntPtr.Subtract(FoundMainAOBAddress, (short)Items.PalKeyTempStatus);
+
+
             MemoryManager.WriteMemory(processHandle, targetAddress, (short)1);
             MemoryManager.WriteMemory(processHandle, targetAddressTemp, (short)0);
+            MemoryManager.WriteMemory(processHandle, targetAddressTempRange, (short)0);
         }
 
         public void SetPalKeyToHot()
@@ -1431,8 +1448,11 @@ namespace MGS1_MC_Cheat_Trainer
             IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
             IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKey);
             IntPtr targetAddressTemp = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKeyTemp);
+            IntPtr targetAddressTempRange = IntPtr.Subtract(FoundMainAOBAddress, (short)Items.PalKeyTempStatus);
+
             MemoryManager.WriteMemory(processHandle, targetAddress, (short)1);
             MemoryManager.WriteMemory(processHandle, targetAddressTemp, (short)1);
+            MemoryManager.WriteMemory(processHandle, targetAddressTempRange, (short)9100);
 
         }
 
@@ -1447,8 +1467,11 @@ namespace MGS1_MC_Cheat_Trainer
             IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
             IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKey);
             IntPtr targetAddressTemp = IntPtr.Subtract(FoundMainAOBAddress, (int)Items.PalKeyTemp);
+            IntPtr targetAddressTempRange = IntPtr.Subtract(FoundMainAOBAddress, (short)Items.PalKeyTempStatus);
+
             MemoryManager.WriteMemory(processHandle, targetAddress, (short)1);
             MemoryManager.WriteMemory(processHandle, targetAddressTemp, (short)2);
+            MemoryManager.WriteMemory(processHandle, targetAddressTempRange, (short)-9100);
         }
 
         public void EnablePalKey()
