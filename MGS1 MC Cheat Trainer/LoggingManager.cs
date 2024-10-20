@@ -75,11 +75,11 @@ namespace MGS1_MC_Cheat_Trainer
             }
         }
 
-        public void LogAllDamageReadings()
+        public void LogAllAddresses()
         {
             var damageReadings = new Dictionary<string, Func<string>>()
             {
-
+                // Weapons
                 { "Socom's Current Ammo", () => AobManager.Instance.ReadSocomAmmo() },
                 { "Socom's Max Ammo", () => AobManager.Instance.ReadSocomMaxAmmo() },
                 { "Famas's Current Ammo", () => AobManager.Instance.ReadFamasAmmo() },
@@ -100,6 +100,11 @@ namespace MGS1_MC_Cheat_Trainer
                 { "Chaff Grenade's Max Ammo", () => AobManager.Instance.ReadChaffGrenadeMaxAmmo() },
                 { "PSG1's Current Ammo", () => AobManager.Instance.ReadPSG1Ammo() },
                 { "PSG1's Max Ammo", () => AobManager.Instance.ReadPSG1MaxAmmo() },
+                // Items
+
+                // Game Stats
+
+                // Miscellaneous
             };
 
             foreach (var reading in damageReadings)

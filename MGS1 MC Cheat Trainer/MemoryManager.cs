@@ -7,7 +7,7 @@ namespace MGS1_MC_Cheat_Trainer
 {
     public class MemoryManager
     {
-        private static MemoryManager ?_instance;
+        private static MemoryManager? _instance;
 
         public static MemoryManager Instance => _instance ??= new MemoryManager();
 
@@ -33,7 +33,7 @@ namespace MGS1_MC_Cheat_Trainer
             Process? process = Process.GetProcessesByName(Constants.PROCESS_NAME).FirstOrDefault();
             if (process == null)
             {
-               
+
             }
             return process;
         }
@@ -149,6 +149,61 @@ namespace MGS1_MC_Cheat_Trainer
 
             return result.ToString().Trim();
         }
+
+        public static string GetDecimalValueOnly(byte[] buffer, DataType dataType)
+        {
+            switch (dataType)
+            {
+                case DataType.UInt8:
+                    return buffer[0].ToString();
+                case DataType.Int8:
+                    sbyte sbyteVal = (sbyte)buffer[0];
+                    return sbyteVal.ToString();
+                case DataType.Int16:
+                    short shortVal = BitConverter.ToInt16(buffer, 0);
+                    return shortVal.ToString();
+                case DataType.UInt16:
+                    ushort ushortVal = BitConverter.ToUInt16(buffer, 0);
+                    return ushortVal.ToString();
+                case DataType.Int32:
+                    int intVal = BitConverter.ToInt32(buffer, 0);
+                    return intVal.ToString();
+                case DataType.UInt32:
+                    uint uintVal = BitConverter.ToUInt32(buffer, 0);
+                    return uintVal.ToString();
+                case DataType.Int64:
+                    long longVal = BitConverter.ToInt64(buffer, 0);
+                    return longVal.ToString();
+                case DataType.UInt64:
+                    ulong ulongVal = BitConverter.ToUInt64(buffer, 0);
+                    return ulongVal.ToString();
+                case DataType.Float:
+                    float floatVal = BitConverter.ToSingle(buffer, 0);
+                    return floatVal.ToString();
+                case DataType.Double:
+                    double doubleVal = BitConverter.ToDouble(buffer, 0);
+                    return doubleVal.ToString();
+                case DataType.ByteArray:
+                    // For ByteArray, return the decimal values separated by spaces
+                    return string.Join(" ", buffer.Select(b => b.ToString()));
+                default:
+                    throw new InvalidOperationException("Unsupported data type.");
+            }
+        }
+
+        public static string ReadDecimalValueAsString(IntPtr processHandle, IntPtr address, int bytesToRead, DataType dataType)
+        {
+            // Read memory bytes from the target address
+            byte[] buffer = ReadMemoryBytes(processHandle, address, bytesToRead);
+
+            // Check if memory read was successful
+            if (buffer == null || buffer.Length != bytesToRead)
+                return $"Failed to read memory from address: 0x{address.ToInt64():X}.";
+
+            // Get the decimal value
+            return GetDecimalValueOnly(buffer, dataType);
+        }
+
 
         public static bool WriteMemory<T>(IntPtr processHandle, IntPtr address, T value)
         {

@@ -1,3 +1,7 @@
+using System.Diagnostics;
+using System.Globalization;
+using System.Security.Principal;
+
 namespace MGS1_MC_Cheat_Trainer
 {
     public partial class MainForm : Form
@@ -5,16 +9,136 @@ namespace MGS1_MC_Cheat_Trainer
         public MainForm()
         {
             InitializeComponent();
+            gameStatParsingTimer.Start();
+            gameStatParsingTimer.Tick += SetGameStats;
+
+            // Attach event handlers for alertsTriggeredTextbox
+            alertsTriggeredTextbox.Enter += AlertsTriggeredTextbox_Enter;
+            alertsTriggeredTextbox.Leave += AlertsTriggeredTextbox_Leave;
+
+            // Attach event handlers for peopleKilledTextbox
+            peopleKilledTextbox.Enter += PeopleKilledTextbox_Enter;
+            peopleKilledTextbox.Leave += PeopleKilledTextbox_Leave;
+
+            // Rations Used TextBox
+            rationsUsedTextbox.Enter += RationsUsedTextbox_Enter;
+            rationsUsedTextbox.Leave += RationsUsedTextbox_Leave;
+
+            // Continues Used TextBox
+            continuesUsedTextbox.Enter += ContinuesUsedTextbox_Enter;
+            continuesUsedTextbox.Leave += ContinuesUsedTextbox_Leave;
+
+            // Saves Used TextBox
+            savesUsedTextbox.Enter += SavesUsedTextbox_Enter;
+            savesUsedTextbox.Leave += SavesUsedTextbox_Leave;
+
+        }
+
+        private void AlertsTriggeredTextbox_Enter(object sender, EventArgs e)
+        {
+            isAlertsTriggeredEditing = true;
+        }
+
+        private void AlertsTriggeredTextbox_Leave(object sender, EventArgs e)
+        {
+            isAlertsTriggeredEditing = false;
+        }
+
+        // People Killed TextBox event handlers
+        private void PeopleKilledTextbox_Enter(object sender, EventArgs e)
+        {
+            isPeopleKilledEditing = true;
+        }
+
+        private void PeopleKilledTextbox_Leave(object sender, EventArgs e)
+        {
+            isPeopleKilledEditing = false;
+        }
+
+        // Rations Used TextBox event handlers
+        private void RationsUsedTextbox_Enter(object sender, EventArgs e)
+        {
+            isRationsUsedEditing = true;
+        }
+
+        private void RationsUsedTextbox_Leave(object sender, EventArgs e)
+        {
+            isRationsUsedEditing = false;
+        }
+
+        // Continues Used TextBox event handlers
+        private void ContinuesUsedTextbox_Enter(object sender, EventArgs e)
+        {
+            isContinuesUsedEditing = true;
+        }
+
+        private void ContinuesUsedTextbox_Leave(object sender, EventArgs e)
+        {
+            isContinuesUsedEditing = false;
+        }
+
+        // Saves Used TextBox event handlers
+        private void SavesUsedTextbox_Enter(object sender, EventArgs e)
+        {
+            isSavesUsedEditing = true;
+        }
+
+        private void SavesUsedTextbox_Leave(object sender, EventArgs e)
+        {
+            isSavesUsedEditing = false;
+        }
+
+
+        private void GameTimeTextbox_Enter(object sender, EventArgs e)
+        {
+            isGameTimeEditing = true;
+        }
+
+        private void GameTimeTextbox_Leave(object sender, EventArgs e)
+        {
+            isGameTimeEditing = false;
+        }
+
+        private bool IsAdministrator()
+        {
+            using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
+            {
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+                return principal.IsInRole(WindowsBuiltInRole.Administrator);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (!IsAdministrator())
+            {
+                // Attempt to restart the application with administrative privileges by checking if the user is an administrator
+                try
+                {
+                    ProcessStartInfo proc = new ProcessStartInfo
+                    {
+                        UseShellExecute = true,
+                        WorkingDirectory = Application.StartupPath,
+                        FileName = Application.ExecutablePath,
+                        Verb = "runas"
+                    };
+                    Process.Start(proc);
+                    Application.Exit();
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    // If an error occurs this will display in the log and if they submit it in a Discord ticket we can troubleshoot
+                    LoggingManager.Instance.Log("This application must be run as Administrator.\n\nExiting now.");
+                    Application.Exit();
+                    return;
+                }
+            }
+
             bool aobFound = AobManager.Instance.FindAndStoreMainAOB();
             if (!aobFound)
             {
-                MessageBox.Show(
-                    "Failed to hook to the game process. Please try again if this persists please reach out to us at our Support Discord",
-                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LoggingManager.Instance.Log("Game Process not found. The game likely isn't running.");
             }
 
             if (aobFound)
@@ -23,6 +147,60 @@ namespace MGS1_MC_Cheat_Trainer
 
             }
         }
+
+        private bool isAlertsTriggeredEditing = false;
+        private bool isPeopleKilledEditing = false;
+        private bool isRationsUsedEditing = false;
+        private bool isContinuesUsedEditing = false;
+        private bool isSavesUsedEditing = false;
+        private bool isGameTimeEditing = false;
+
+        private void gameStatParsingTimer_Tick(object sender, EventArgs e)
+        {
+            SetGameStats(sender, e);
+        }
+
+        private void SetGameStats(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!isAlertsTriggeredEditing)
+                {
+                    string alertsTriggered = AobManager.Instance.ReadAlertTriggeredForUser();
+                    alertsTriggeredTextbox.Text = alertsTriggered;
+                }
+
+                if (!isPeopleKilledEditing)
+                {
+                    string peopleKilled = AobManager.Instance.ReadEnemiesKilledForUser();
+                    peopleKilledTextbox.Text = peopleKilled;
+                }
+
+                if (!isRationsUsedEditing)
+                {
+                    string rationsUsed = AobManager.Instance.ReadRationsUsedForUser();
+                    rationsUsedTextbox.Text = rationsUsed;
+                }
+
+                if (!isContinuesUsedEditing)
+                {
+                    string continuesUsed = AobManager.Instance.ReadContinuesUsedForUser();
+                    continuesUsedTextbox.Text = continuesUsed;
+                }
+
+                if (!isSavesUsedEditing)
+                {
+                    string savesUsed = AobManager.Instance.ReadSavesUsedForUser();
+                    savesUsedTextbox.Text = savesUsed;
+                }
+              
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+        }
+
 
         private void SetAmmoSocom_Click(object sender, EventArgs e)
         {
@@ -1288,5 +1466,213 @@ namespace MGS1_MC_Cheat_Trainer
                 LoggingManager.Instance.Log($"Error: {ex.Message}");
             }
         }
+
+        // SetAlertsTriggered()
+        private void changeAlertsButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Since the user is making a change, we ensure the timer doesn't interfere
+                isAlertsTriggeredEditing = true;
+
+                // Read the current value before editing
+                string beforeEdit = AobManager.Instance.ReadAlertTriggeredForUser();
+                LoggingManager.Instance.Log($"Alerts Triggered before editing: {beforeEdit}");
+
+                // Parse the user input
+                if (short.TryParse(alertsTriggeredTextbox.Text, out short alertsTriggered))
+                {
+                    AobManager.Instance.SetAlertsTriggered(alertsTriggered);
+
+                    // Read the value after editing
+                    string afterEdit = AobManager.Instance.ReadAlertTriggeredForUser();
+                    LoggingManager.Instance.Log($"Alerts Triggered after editing: {afterEdit}");
+
+                    // Update the textbox with the confirmed value
+                    alertsTriggeredTextbox.Text = afterEdit;
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid number for Alerts Triggered.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+            finally
+            {
+                // Allow the timer to resume updating the textbox
+                isAlertsTriggeredEditing = false;
+
+                // Force the textbox to lose focus
+                this.ActiveControl = null; // Removes focus from any control
+            }
+        }
+
+
+
+        private void changePeopleKilledButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                isPeopleKilledEditing = true;
+
+                string beforeEdit = AobManager.Instance.ReadEnemiesKilledForUser();
+                LoggingManager.Instance.Log($"People Killed before editing: {beforeEdit}");
+
+                if (short.TryParse(peopleKilledTextbox.Text, out short peopleKilledValue))
+                {
+                    AobManager.Instance.SetPeopleKilled(peopleKilledValue);
+
+                    string afterEdit = AobManager.Instance.ReadEnemiesKilledForUser();
+                    LoggingManager.Instance.Log($"People Killed after editing: {afterEdit}");
+
+                    peopleKilledTextbox.Text = afterEdit;
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid number for People Killed.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+            finally
+            {
+                isPeopleKilledEditing = false;
+                this.ActiveControl = null; // Force the textbox to lose focus
+            }
+        }
+
+        private void changeRationsUsedButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                isRationsUsedEditing = true;
+
+                string beforeEdit = AobManager.Instance.ReadRationsUsedForUser();
+                LoggingManager.Instance.Log($"Rations Used before editing: {beforeEdit}");
+
+                if (short.TryParse(rationsUsedTextbox.Text, out short rationsUsedValue))
+                {
+                    AobManager.Instance.SetRationsUsed(rationsUsedValue);
+
+                    string afterEdit = AobManager.Instance.ReadRationsUsedForUser();
+                    LoggingManager.Instance.Log($"Rations Used after editing: {afterEdit}");
+
+                    rationsUsedTextbox.Text = afterEdit;
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid number for Rations Used.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+            finally
+            {
+                isRationsUsedEditing = false;
+                this.ActiveControl = null; // Force the textbox to lose focus
+            }
+        }
+
+
+        private void changeContinuesUsedButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                isContinuesUsedEditing = true;
+
+                string beforeEdit = AobManager.Instance.ReadContinuesUsedForUser();
+                LoggingManager.Instance.Log($"Continues Used before editing: {beforeEdit}");
+
+                if (short.TryParse(continuesUsedTextbox.Text, out short continuesUsedValue))
+                {
+                    AobManager.Instance.SetContinuesUsed(continuesUsedValue);
+
+                    string afterEdit = AobManager.Instance.ReadContinuesUsedForUser();
+                    LoggingManager.Instance.Log($"Continues Used after editing: {afterEdit}");
+
+                    continuesUsedTextbox.Text = afterEdit;
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid number for Continues Used.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+            finally
+            {
+                isContinuesUsedEditing = false;
+                this.ActiveControl = null; // Force the textbox to lose focus
+            }
+
+        }
+
+        private void changeSavesUsedButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                isSavesUsedEditing = true;
+
+                string beforeEdit = AobManager.Instance.ReadSavesUsedForUser();
+                LoggingManager.Instance.Log($"Saves Used before editing: {beforeEdit}");
+
+                if (short.TryParse(savesUsedTextbox.Text, out short savesUsedValue))
+                {
+                    AobManager.Instance.SetSavesUsed(savesUsedValue);
+
+                    string afterEdit = AobManager.Instance.ReadSavesUsedForUser();
+                    LoggingManager.Instance.Log($"Saves Used after editing: {afterEdit}");
+
+                    savesUsedTextbox.Text = afterEdit;
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid number for Saves Used.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+            finally
+            {
+                isSavesUsedEditing = false;
+                this.ActiveControl = null; // Force the textbox to lose focus
+            }
+
+        }
     }
 }
+     
+
+
+/*
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AobManager.Instance.ReadPlayTime();
+                LoggingManager.Instance.Log(
+                    $"Game Time before editing: {AobManager.Instance.ReadPlayTime()}");
+
+
+
+                string CurrentCameraStatus = AobManager.Instance.ReadPlayTime();
+                LoggingManager.Instance.Log($"Game Time after editing: {CurrentCameraStatus}");
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.Log($"Error: {ex.Message}");
+            }
+*/
+
+        

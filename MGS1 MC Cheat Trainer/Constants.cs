@@ -92,12 +92,16 @@ namespace MGS1_MC_Cheat_Trainer
 
         public enum GameStats
         {
+            MapString = 1076,
+            Difficulty = 1059, // 00 = Easy, 01 = Normal, 02 = Hard, 03 = Extreme
+            Radar = 1055,
             AlertsTriggered = 904,
             EnemiesKilled = 902,
             RationsUsed = 888,
             ContinuesUsed = 886,
             PlayTime = 880,
-            TimesSaved = 862,
+            TimesSaved = 884,
+            
         }
 
     }

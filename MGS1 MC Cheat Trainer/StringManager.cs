@@ -217,60 +217,11 @@ namespace MGS1_MC_Cheat_Trainer
                 { LocationString.rank, "Rank Screen" },
             };
 
-        public string FindLocationStringDirectlyInRange()
+        // TODO: Add in a function to parse the player's location
+        // 
+        public static string GetLocationString(LocationString location)
         {
-            Process process = GetMGS1Process();
-            if (process == null)
-            {
-                return "Game process not found.";
-            }
-
-            // This will need to be modified for dynamic memory as unlike MGS3 nothing we use is static
-            IntPtr processHandle = OpenGameProcess(process);
-            IntPtr baseAddress = process.MainModule.BaseAddress;
-            IntPtr startAddress = IntPtr.Add(baseAddress, 0x1C00000);
-            IntPtr endAddress = IntPtr.Add(baseAddress, 0x1D00000);
-            long size = endAddress.ToInt64() - startAddress.ToInt64();
-            // End of where dynamic changes will be needed
-
-            foreach (StringManager.LocationString location in Enum.GetValues(typeof(StringManager.LocationString)))
-            {
-                var locationString = location.ToString();
-                byte[] pattern = Encoding.ASCII.GetBytes(locationString);
-                string mask = new string('x', pattern.Length);
-
-                IntPtr foundAddress =
-                    MemoryManager.Instance.ScanMemory(processHandle, startAddress, size, pattern, mask);
-                if (foundAddress != IntPtr.Zero)
-                {
-                    string areaName = StringManager.LocationAreaNames.TryGetValue(location, out var name)
-                        ? name
-                        : "Unknown Area";
-
-                    // Checking for cutscene indicators These are MGS3's cutscene suffixes
-                    // However we can change these to MGS1's if needed and we find a suffix pattern is needed
-                    foreach (var suffix in new[] { "_0", "_1" })
-                    {
-                        byte[] cutscenePattern = Encoding.ASCII.GetBytes(locationString + suffix);
-                        IntPtr cutsceneFoundAddress = MemoryManager.Instance.ScanMemory(processHandle, startAddress,
-                            size, cutscenePattern, mask + "x" + "x");
-
-                        if (cutsceneFoundAddress != IntPtr.Zero)
-                        {
-                            NativeMethods.CloseHandle(processHandle);
-                            return
-                                $"Location String: {locationString}{suffix} (Cutscene) \nArea Name: {areaName} \nMemory Address: {cutsceneFoundAddress.ToString("X")}";
-                        }
-                    }
-
-                    NativeMethods.CloseHandle(processHandle);
-                    return
-                        $"Location String: {locationString} \nArea Name: {areaName} \nMemory Address: {foundAddress.ToString("X")}";
-                }
-            }
-
-            NativeMethods.CloseHandle(processHandle);
-            return "No Location String found in specified range.";
+            return LocationAreaNames[location];
         }
     }
 }

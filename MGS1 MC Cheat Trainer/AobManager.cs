@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using static MGS1_MC_Cheat_Trainer.Constants;
 using DataType = MGS1_MC_Cheat_Trainer.Constants.DataType;
 
@@ -1669,16 +1670,24 @@ namespace MGS1_MC_Cheat_Trainer
 
         #region Game Stats
 
-        public string ReadPlayTime()
+        
+        public void SetAlertsTriggered(short alertsTriggeredValue)
         {
             if (!FindAndStoreMainAOB())
             {
-                return "Failed to find Game Time address.";
+                MessageBox.Show("Failed to find Alert Mode address.");
+                return;
+            }
+
+            if (alertsTriggeredValue < 0)
+            {
+                MessageBox.Show("Alerts Triggered value can't be lower than 0.");
+                return;
             }
 
             IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
-            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.PlayTime);
-            return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.AlertsTriggered);
+            MemoryManager.WriteMemory(processHandle, targetAddress, alertsTriggeredValue);
         }
 
         public string ReadAlertsTriggered()
@@ -1693,6 +1702,37 @@ namespace MGS1_MC_Cheat_Trainer
             return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
         }
 
+        public string ReadAlertTriggeredForUser()
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                return "Unknown";
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.AlertsTriggered);
+            return MemoryManager.ReadDecimalValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }      
+
+        public void SetContinuesUsed(short continuesUsedValue)
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                MessageBox.Show("Failed to find Continues address.");
+                return;
+            }
+
+            if (continuesUsedValue < 0)
+            {
+                MessageBox.Show("Continues Used value can't be lower than 0.");
+                return;
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.ContinuesUsed);
+            MemoryManager.WriteMemory(processHandle, targetAddress, continuesUsedValue);
+        }
+
         public string ReadContinuesUsed()
         {
             if (!FindAndStoreMainAOB())
@@ -1703,6 +1743,37 @@ namespace MGS1_MC_Cheat_Trainer
             IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
             IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.ContinuesUsed);
             return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        public string ReadContinuesUsedForUser()
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                return "Unknown";
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.ContinuesUsed);
+            return MemoryManager.ReadDecimalValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        public void SetRationsUsed(short rationsUsedValue)
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                MessageBox.Show("Failed to find Rations Used address.");
+                return;
+            }
+
+            if (rationsUsedValue < 0)
+            {
+                MessageBox.Show("Rations Used value can't be lower than 0.");
+                return;
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.RationsUsed);
+            MemoryManager.WriteMemory(processHandle, targetAddress, rationsUsedValue);
         }
 
         public string ReadRationsUsed()
@@ -1717,6 +1788,37 @@ namespace MGS1_MC_Cheat_Trainer
             return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
         }
 
+        public string ReadRationsUsedForUser() 
+        { 
+            if (!FindAndStoreMainAOB()) 
+            {
+                return "Unknown";
+            }
+
+        IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+        IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.RationsUsed);
+        return MemoryManager.ReadDecimalValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        public void SetPeopleKilled(short peopleKilledValue)
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                MessageBox.Show("Failed to find Alert Mode address.");
+                return;
+            }
+
+            if (peopleKilledValue < 0)
+            {
+                MessageBox.Show("Alerts Triggered value can't be lower than 0.");
+                return;
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.EnemiesKilled);
+            MemoryManager.WriteMemory(processHandle, targetAddress, peopleKilledValue);
+        }
+
         public string ReadEnemiesKilled()
         {
             if (!FindAndStoreMainAOB())
@@ -1727,6 +1829,37 @@ namespace MGS1_MC_Cheat_Trainer
             IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
             IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.EnemiesKilled);
             return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        public string ReadEnemiesKilledForUser()
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                return "Unknown";
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.EnemiesKilled);
+            return MemoryManager.ReadDecimalValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        public void SetSavesUsed(short savesUsedValue)
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                MessageBox.Show("Failed to find Saves Used address.");
+                return;
+            }
+
+            if (savesUsedValue < 0)
+            {
+                MessageBox.Show("Saves Used value can't be lower than 0.");
+                return;
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.TimesSaved);
+            MemoryManager.WriteMemory(processHandle, targetAddress, savesUsedValue);
         }
 
         public string ReadSavesUsed()
@@ -1740,6 +1873,108 @@ namespace MGS1_MC_Cheat_Trainer
             IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.TimesSaved);
             return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
         }
+
+        public string ReadSavesUsedForUser()
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                return "Unknown";
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.TimesSaved);
+            return MemoryManager.ReadDecimalValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        public void SetPlayTime(ushort playTimeValue)
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                MessageBox.Show("Failed to find Game Time address.");
+                return;
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            if (processHandle == IntPtr.Zero)
+            {
+                MessageBox.Show("Failed to open game process.");
+                return;
+            }
+
+            try
+            {
+                // Calculate the correct target address using Subtract
+                IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.PlayTime);
+                // Alternatively, use IntPtr.Add if Subtract is incorrect:
+                // IntPtr targetAddress = IntPtr.Add(FoundMainAOBAddress, (int)GameStats.PlayTime);
+
+                // Logging for debugging
+                LoggingManager.Instance.Log($"Setting PlayTime at address: 0x{targetAddress.ToInt64():X}");
+                LoggingManager.Instance.Log($"PlayTime Value (seconds): {playTimeValue} (Hex: 0x{playTimeValue:X4})");
+
+                // Convert playTimeValue to byte array (Little Endian)
+                byte[] bytesToWrite = BitConverter.GetBytes(playTimeValue);
+                LoggingManager.Instance.Log($"Bytes to Write: {BitConverter.ToString(bytesToWrite)}");
+
+                // Write the bytes directly using your existing WriteMemory function
+                bool writeSuccess = MemoryManager.WriteMemory(processHandle, targetAddress, bytesToWrite);
+                LoggingManager.Instance.Log($"Write Success: {writeSuccess}");
+
+                if (!writeSuccess)
+                {
+                    MessageBox.Show("Failed to write playtime to memory.", "Write Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            finally
+            {
+                MemoryManager.NativeMethods.CloseHandle(processHandle);
+            }
+        }
+
+
+
+        public string ReadPlayTime()
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                return "Failed to find Game Time address.";
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.PlayTime);
+            return MemoryManager.ReadMemoryValueAsString(processHandle, targetAddress, 2, DataType.UInt16);
+        }
+
+        // using ReadMemoryValueAsStringForUser for play time this one will need to be converted to hours, minutes, seconds
+        public string ReadPlayTimeForUser()
+        {
+            if (!FindAndStoreMainAOB())
+            {
+                return "Unknown";
+            }
+
+            IntPtr processHandle = MemoryManager.OpenGameProcess(MemoryManager.GetMGS1Process());
+            if (processHandle == IntPtr.Zero)
+            {
+                return "Failed to open game process.";
+            }
+
+            IntPtr targetAddress = IntPtr.Subtract(FoundMainAOBAddress, (int)GameStats.PlayTime);
+            byte[] buffer = MemoryManager.ReadMemoryBytes(processHandle, targetAddress, 2);
+
+            if (buffer == null || buffer.Length != 2)
+                return $"Failed to read memory from address: 0x{targetAddress.ToInt64():X}.";
+
+            // Log the bytes read
+            LoggingManager.Instance.Log($"Bytes Read: {BitConverter.ToString(buffer)}");
+
+            // Convert bytes to UInt16 (Little Endian)
+            ushort playTimeValue = BitConverter.ToUInt16(buffer, 0);
+            LoggingManager.Instance.Log($"PlayTime Value (seconds): {playTimeValue} (Hex: 0x{playTimeValue:X4})");
+
+            return playTimeValue.ToString();
+        }
+
 
 
         #endregion
